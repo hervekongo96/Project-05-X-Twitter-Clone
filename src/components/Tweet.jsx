@@ -27,10 +27,10 @@ export default function Tweet() {
                                 <img src={tweet.imageTweet} alt=""/>
                             </div>
                             <div className="tweet-actions">
-                                <span><TweetAction url={"src/images/Reply.svg"}/> {tweet.message}</span>
-                                <span><TweetAction url={"src/images/Retweet.svg"}/> {tweet.share}</span>
-                                <span><TweetAction url={"src/images/React.svg"}/> {tweet.like}</span>
-                                <span><TweetAction url={"src/images/Group1.svg"}/> {tweet.upload}</span>
+                                <span className='tweet-action'><TweetAction url={"src/images/Reply.svg"}/> {tweet.message}</span>
+                                <span className='tweet-action'><TweetAction url={"src/images/Retweet.svg"}/> {tweet.share}</span>
+                                <span className='tweet-action'><TweetAction url={"src/images/React.svg"}/> {tweet.like}</span>
+                                <span className='tweet-action'><TweetAction url={"src/images/Group1.svg"}/> {tweet.upload}</span>
                             </div>
                         </div>
                     </div>
