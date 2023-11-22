@@ -1,12 +1,9 @@
 
 
-export default function TweetEditorActions() {
+export default function TweetEditorActions({url}) {
   return (
-    <div className="tweet-editor-actions">
-        <span>icon</span>
-        <span>Icon</span>
-        <span>icon</span>
-        <span>icon</span>
+    <div>
+        <img src={url} alt="actionIcon" />
     </div>
   )
 }
