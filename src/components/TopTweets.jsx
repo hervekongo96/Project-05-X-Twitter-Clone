@@ -1,7 +1,7 @@
 export default function TopTweets() {
   return (
     <div className="top-tweets">
-        Icons
+        <img src="src/images/Timeline-Prop.svg" alt="" />
     </div>
   )
 }
