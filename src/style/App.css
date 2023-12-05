@@ -209,6 +209,9 @@ body{
 }
 li {
     list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 10px;
 }
 .sidebarOptions > li {
     font-weight: 800;
