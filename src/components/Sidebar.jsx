@@ -1,6 +1,6 @@
 import SidebarOptions from "./SidebarOptions";
 import Tweeter from "../images/Twitter.svg";
-import Avatar from "./Avatar";
+import CompteInSideBar from "./CompteInSideBar";
 
 
 export default function Sidebar() {
@@ -13,7 +13,7 @@ export default function Sidebar() {
             <SidebarOptions />
         </div>    
         <div className="footer-sidebar">
-            <Avatar />
+            <CompteInSideBar />
         </div>
     </div>
   )
