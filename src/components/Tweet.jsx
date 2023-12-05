@@ -5,6 +5,7 @@ import TweetActionButton from './TweetActionButton'
 export default function Tweet() {
   return (
     <>
+    {/* //my logic for all things */}
         {
             data.map(tweet =>(
                 <div className='tweet' key={tweet.id}>

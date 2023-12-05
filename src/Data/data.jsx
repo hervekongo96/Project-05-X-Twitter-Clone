@@ -39,7 +39,7 @@ const data = [
         message:"6.8K",
         share:"36.6K",
         like:"267.1K",
-        upload:"", 
+        upload:"",
      },
      {
         id:4,
