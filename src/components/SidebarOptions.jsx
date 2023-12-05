@@ -11,30 +11,30 @@ import Button from "./Button"
 
 export default function SidebarOptions() {
   return (
-    <ul className="sidebarOptions">
+    <ul className="sidebarOptions">        
         <li>
-            <img src={Home} alt="home" /><a to="/">Home</a>
+            <img src={Home} alt="home" /><a to="/home">Home</a>
         </li>
         <li>
-            <img src={Explore} alt="explore" /><a to="/">Explore</a>
+            <img src={Explore} alt="explore" /><a to="/explore">Explore</a>
         </li>
         <li>
-            <img src={Notifications} alt="notification" /><a to="/">Notifications</a>
+            <img src={Notifications} alt="notification" /><a to="/notification">Notifications</a>
         </li>
         <li>
-            <img src={Messages} alt="message" /><a to="/">Messages</a>
+            <img src={Messages} alt="message" /><a to="/messages">Messages</a>
         </li>
         <li>
-            <img src={Bookmarks} alt="bookmark" /><a to="/">Bookmarks</a>
+            <img src={Bookmarks} alt="bookmark" /><a to="/bookmarks">Bookmarks</a>
         </li>
         <li>
-            <img src={Lists} alt="Lists" /><a to="/">Lists</a>
+            <img src={Lists} alt="Lists" /><a to="/lists">Lists</a>
         </li>
         <li>
-            <img src={Profile} alt="Profile" /><a to="/">Profile</a>
+            <img src={Profile} alt="Profile" /><a to="/profile">Profile</a>
         </li>
         <li>
-            <img src={More} alt="More" /><a to="/">More</a>
+            <img src={More} alt="More" /><a to="/more">More</a>
         </li>
         
         <Button value={"Tweet"} className={"button btn"} />

@@ -9,6 +9,7 @@ function Home() {
       <main className="timeline">
         <TimeLine />
       </main>
+      <Sidebar />
     </>
   );
 }
