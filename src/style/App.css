@@ -201,3 +201,20 @@ body{
     padding-left: 20px;
     padding-right: 20px;
 }
+
+/* sidebarOptions css */
+.sidebarOptions {
+    align-items: center;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+.sidebarOptions > li {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+
