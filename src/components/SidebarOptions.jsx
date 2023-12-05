@@ -7,6 +7,7 @@ import Bookmarks from "../images/Bookmarks.svg"
 import Lists from "../images/Lists.svg"
 import Profile from "../images/Profile.svg"
 import More from "../images/More.svg"
+import Button from "./Button"
 
 export default function SidebarOptions() {
   return (
@@ -35,6 +36,9 @@ export default function SidebarOptions() {
         <li>
             <img src={More} alt="More" /><a to="/">More</a>
         </li>
+        
+        <Button value={"Tweet"} className={"button btn"} />
+        
     </ul>
   )
 }
