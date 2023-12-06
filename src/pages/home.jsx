@@ -1,7 +1,7 @@
 import React from 'react';
 import TimeLine from '../components/TimeLine';
 import Sidebar from '../components/Sidebar';
-import Avatar from '../components/Avatar';
+import Trends from '../components/Trends';
 
 function Home() {
   return (
@@ -10,6 +10,7 @@ function Home() {
       <main className="timeline">
         <TimeLine />
       </main>
+      <Trends />
     </>
   );
 }

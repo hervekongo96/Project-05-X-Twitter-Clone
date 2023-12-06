@@ -1,7 +1,7 @@
-export default function PageTitle() {
+export default function PageTitle({texte}) {
   return (
     <div className="page-title">
-        Home
+        {texte}
     </div>
   )
 }

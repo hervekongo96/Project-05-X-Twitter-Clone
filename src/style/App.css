@@ -20,7 +20,6 @@ body{
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
 }
-
 .header {
     padding: 1.5rem 1rem;
     display: flex;
@@ -192,6 +191,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: auto;
 }
 
 /* sidebar css */
@@ -200,14 +200,13 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: auto;
+    padding-right: auto;
     height: 100vh;
     width: 40vh;
-    position: fixed;
-    
+    position: sticky;
+    top: 0;
 }
-
 .sidebar-image{
     width: 20%;
     padding-left: 15px;
@@ -216,12 +215,17 @@ body{
 .footer-sidebar{
     margin-top: auto;
 }
-
+.compte-icon{
+    display: flex;
+    gap: 150px;
+}
+/* end sidebar css */
 
 /* sidebarOptions css */
 .sidebarOptions {
     align-items: center;
     cursor: pointer;
+    list-style: none;
 }
 .sidebarOptions > li {
     font-weight: 700;
@@ -230,7 +234,6 @@ body{
     padding: 12px;
 }
 li {
-    list-style: none;
     display: flex;
     gap: 20px;
     padding: 5px 7px;
@@ -239,6 +242,14 @@ li:hover{
     background-color: #181818;
     border-radius: 30px;
     transition: #181818 100ms ease-out;
+    width: 56%;
+}
+
+.navLink{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
 }
 
 .btn{
@@ -249,6 +260,8 @@ li:hover{
     width: 100%;
 }
 
+/* end sidebarOptions css */
+
 /* compte-in-sidebar-css */
 .compte-in-sidebar{
     display: flex;
@@ -257,4 +270,181 @@ li:hover{
 
 .compte-in-sidebar-avatar{
     width: 10%;
+}
+
+/* end compte-in-sidebar-css */
+
+/* scroll css */
+::-webkit-scrollbar{
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #fff;
+}
+/* end scroll css */
+
+/* trend-style-code-css */
+.trends{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: auto;
+    padding-right: auto;
+    height: 100vh;
+    width: 40vh;
+    
+}
+
+.trends-input{
+    display: flex;
+    align-items: center;
+    background-color: #2F3336;
+    border-radius: 20px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.trends-input > input{
+    border: none;
+    outline: none;
+    background-color: #2F3336;
+    padding-left: 25px;
+    color: #fff;
+    position: sticky;
+}
+
+.trends-input > img{
+    width: 8%;
+}
+
+.trends-container{
+    margin-top: 10px;
+    padding-left: 5px;
+    padding: 10px;
+    background-color: #2F3336;
+    border-radius: 20px;
+    height: 400px;
+}
+
+.trends-container-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trends-container-follo{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding: 15px;
+    background-color: #2F3336;
+    border-radius: 20px;
+    height: 320px;
+}
+
+.trends-list, .follow-list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.trendslist-button{
+    font-weight: 900;
+    color: #1D9BF0;
+    cursor: pointer;
+}
+
+.trends-list-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trendsCopieRigth{
+    position: sticky;
+    top: 0;
+}
+
+.follow-title > img{
+    width: 15%;
+}
+
+.follow-list-title{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+.follow-title{
+    display: flex;
+    gap: 5px;
+}
+
+.follow-button{
+    background-color: #fff;
+    width: 80px;
+    height: 25px;
+    margin-left: 12px;
+    border: none;
+    border-radius: 30px;
+}
+
+/* profil style css */
+.trends-container-profil{
+    margin-top: 10px;
+    padding-left: 5px;
+    padding: 15px;
+    background-color: #2F3336;
+    border-radius: 20px;
+    height: 320px;
+}
+
+.image-background-profil{
+    height: 150px;
+    background-image: url('src/images/JS-Full-Form.webp');
+}
+
+.image-background-profil > img{
+    margin-top: 100px;
+    margin-left: 20px;
+    background-color: #181818;
+    border-radius: 100%;
+}
+
+.profil-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    height: 250px;
+    border-bottom: #6E767D solid 1px;
+}
+
+.profil-button {
+    margin-top: 10px;
+    margin-left: 85%;
+    margin-right: 10px;
+    height: 25px;
+    width: 100px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    border: #6E767D solid 1px;
+    text-decoration: none;
+}
+
+.profil-follow {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
 }
