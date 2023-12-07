@@ -1,5 +1,7 @@
 import PageTitle from "../PageTitle"
 import ProfilImage from "../../images/profile-photo.png"
+import Tweet from "../Tweet"
+import ProfilNavigation from "./ProfilNavigation"
 
 
 function Info() {
@@ -17,19 +19,16 @@ function Info() {
             <h3>Bradly Ortiz</h3>
             <span className="tweet-title-details">@badly</span>
           </div>
-          <p className="tweet-title-details">Jained November 2023</p>
+          <p>President Joe Biden a new agreement reached with the European union to ease Trume era tariffs on aluminum and steel as a 'major breakthough' that would service to both strengthen the US</p>
           <div className="profil-follow">
             <span className="tweet-title-details">13 Following</span>
             <span className="tweet-title-details">130 Follower</span>
           </div>
           <div className="sub-menu">
-              <span className="tweet-title-details">Posts</span>
-              <span className="tweet-title-details">Replies</span>
-              <span className="tweet-title-details">Highlights</span>
-              <span className="tweet-title-details">Media</span>
-              <span className="tweet-title-details">Likes</span>
+              <ProfilNavigation />
           </div>
         </div>
+      <Tweet />  
     </div>
   )
 }

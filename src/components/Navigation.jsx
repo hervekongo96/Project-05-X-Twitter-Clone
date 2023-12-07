@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom"
 
-function Navigation({src, url, texte}) {
+function Navigation({src, url, texte, className}) {
   return (
-    <NavLink to={url} className="navLink">
+    <NavLink to={url} className={className}>
         <img src={src} />
         <p>{texte}</p>
     </NavLink>
