@@ -1,7 +1,15 @@
 import followData from "../Data/FollowData"
-
+import { useState } from "react";
 
 function TrendsFollo() {
+
+  const [isOn, setIsOn] = useState(true);
+
+  const handleClick = () => {
+    setIsOn(!isOn);
+  };
+
+
     return (
         <>
           {
@@ -14,7 +22,7 @@ function TrendsFollo() {
                           <span>{follow.title}</span>
                           <p className="tweet-title-details">{follow.author}</p>
                         </div>
-                        <button className="follow-button">Follow</button>
+                        <button className="follow-button" onClick={()=>handleClick()}>{isOn ? 'Following' : 'Follow'}</button>
                     </div>
                 </div>
               </div>

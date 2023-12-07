@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom"
 import Home from "../images/Home-Fill.svg"
 import Explore from "../images/Explore.svg"
 import Notifications from "../images/Notifications.svg"
@@ -15,28 +14,28 @@ export default function SidebarOptions() {
     <nav>
         <ul className="sidebarOptions">        
             <li className="lienk-navigation">
-                <Navigation texte={"Home"} src={Home} url={"/"} />
+                <Navigation texte={"Home"} src={Home} url={"/"} className={"navLink"}/>
             </li>
             <li className="lienk-navigation">
-                <Navigation texte={"Explore"} src={Explore} url={"/explore"} />
+                <Navigation texte={"Explore"} src={Explore} url={"/explore"} className={"navLink"} />
             </li>
             <li className="lienk-navigation">
-                <Navigation texte={"Notifications"} src={Notifications} url={"/notifications"} />
+                <Navigation texte={"Notifications"} src={Notifications} url={"/notification"} className={"navLink"} />
             </li>
             <li className="lienk-navigation">
-                <Navigation texte={"Messages"} src={Messages} url={"/booksmarks"} />
+                <Navigation texte={"Messages"} src={Messages} url={"/message"} className={"navLink"} />
             </li>
             <li className="lienk-navigation">
-                <Navigation texte={"Bookmarks"} src={Bookmarks} url={"/bookmarks"} />
+                <Navigation texte={"Bookmarks"} src={Bookmarks} url={"/bookmarks"} className={"navLink"} />
             </li>
             <li className="lienk-navigation">
-                <Navigation texte={"Lists"} src={Lists} url={"/lists"} />
+                <Navigation texte={"Lists"} src={Lists} url={"/list"} className={"navLink"} />
             </li>
             <li className="lienk-navigation">
-                <Navigation texte={"Profile"} src={Profile} url={"/profil"} />
+                <Navigation texte={"Profile"} src={Profile} url={"/profil"} className={"navLink"} />
             </li>
             <li className="lienk-navigation">
-                <Navigation texte={"More"} src={More} url={"/more"} />
+                <Navigation texte={"More"} src={More} url={"/more"} className={"navLink"} />
             </li>
             
             <Button value={"Tweet"} className={"button btn"} />
