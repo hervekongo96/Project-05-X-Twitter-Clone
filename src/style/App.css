@@ -537,3 +537,8 @@ li:hover{
     display: flex;
     align-items: center;
 }
+
+.tweet-action-button-react{
+    display: flex;
+    gap: 10px;
+}
