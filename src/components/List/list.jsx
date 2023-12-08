@@ -1,4 +1,4 @@
-import Sidebar from "../Sidebar"
+import Sidebar from "../Sidebar/Sidebar"
 import ListHeader from "./ListHeader"
 import ListsTrends from "./ListsTrends"
 

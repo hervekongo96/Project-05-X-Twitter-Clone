@@ -1,4 +1,4 @@
-import Navigation from "./Navigation"
+import Navigation from "../Sidebar/Navigation"
 
 export default function Avatar() {
   return (

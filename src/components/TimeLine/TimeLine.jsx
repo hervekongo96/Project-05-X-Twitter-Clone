@@ -1,6 +1,6 @@
-import Header from "./Header"
-import TweetEditor from "./TweetEditor"
-import Tweets from "./Tweets"
+import Header from "../Header/Header"
+import TweetEditor from "../Tweet/TweetEditor"
+import Tweets from "../Tweet/Tweets"
 
 
 export default function TimeLine() {

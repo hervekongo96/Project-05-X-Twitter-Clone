@@ -1,4 +1,4 @@
-import PageTitle from "../PageTitle"
+import PageTitle from "../Header/PageTitle"
 
 function MoreHeader() {
   return (

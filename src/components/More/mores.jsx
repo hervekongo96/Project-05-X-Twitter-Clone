@@ -1,5 +1,5 @@
 import MoreHeader from "./MoreHeader"
-import Sidebar from "../Sidebar"
+import Sidebar from "../Sidebar/Sidebar"
 import TrendsMore from "./TrendsMore"
 
 function more() {

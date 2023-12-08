@@ -1,6 +1,6 @@
-import PageTitle from "../PageTitle"
+import PageTitle from "../Header/PageTitle"
 import ProfilImage from "../../images/profile-photo.png"
-import Tweet from "../Tweet"
+import Tweet from "../Tweet/Tweet"
 import ProfilNavigation from "./ProfilNavigation"
 
 

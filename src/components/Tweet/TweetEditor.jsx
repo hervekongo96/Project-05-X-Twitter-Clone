@@ -1,4 +1,4 @@
-import Avatar from "./Avatar"
+import Avatar from "../TimeLine/Avatar"
 import TweetEditorForm from "./TweetEditorForm"
 
 export default function TweetEditor() {

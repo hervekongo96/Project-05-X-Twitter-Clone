@@ -1,5 +1,5 @@
-import TrendsList from "../TrendsList"
-import TrendsFollo from "../TrendsFollo"
+import TrendsList from "../Trends/TrendsList"
+import TrendsFollo from "../Trends/TrendsFollo"
 import SearchIcon from "../../images/search.svg"
 import Settings from "../../images/Settings.svg" 
 

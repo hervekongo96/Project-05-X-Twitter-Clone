@@ -1,9 +1,9 @@
 import React from 'react'
-import data from '../Data/data'
-import IconComent from './TweetActionButton/comentIcon/IconComent'
-import IconLike from './TweetActionButton/like/IconLike'
-import IconRetweet from './TweetActionButton/retweetIcon/IconRetweet'
-import IconUpload from './TweetActionButton/uploadIcon/IconUpload'
+import data from '../../Data/data'
+import IconComent from '../TweetActionButton/comentIcon/IconComent'
+import IconLike from '../TweetActionButton/like/IconLike'
+import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
+import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
 
 
 export default function Tweet() {
