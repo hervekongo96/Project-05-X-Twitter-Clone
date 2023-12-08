@@ -1,7 +1,7 @@
 import React from 'react';
-import TimeLine from '../components/TimeLine';
-import Sidebar from '../components/Sidebar';
-import Trends from '../components/Trends';
+import TimeLine from '../components/TimeLine/TimeLine';
+import Trends from '../components/Trends/Trends';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 function Home() {
   return (

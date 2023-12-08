@@ -1,4 +1,4 @@
-import Sidebar from "../Sidebar"
+import Sidebar from "../Sidebar/Sidebar"
 import ExploreHeader from "./ExploreHeader"
 import TrendsExplore from "./TrendsExplore"
 

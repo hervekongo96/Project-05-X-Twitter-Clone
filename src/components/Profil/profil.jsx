@@ -1,4 +1,4 @@
-import Sidebar from "../Sidebar"
+import Sidebar from "../Sidebar/Sidebar"
 import ProfilHeader from "./ProfilHeader"
 import TrendsProfil from "./TrendsProfil"
 
