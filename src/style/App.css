@@ -533,3 +533,17 @@ li:hover{
     display: flex;
     gap: 10px;
 }
+/* overs des texte sur les boutton d'action tweet */
+.tweet-actions > .tweet-action-button-reply :hover{
+    color: blue;
+}
+
+.tweet-actions > .tweet-action-button-retweet :hover{
+    color: green;
+}
+.tweet-actions > .tweet-action-button-react :hover{
+    color: red;
+}
+.tweet-actions > .tweet-action-button-group :hover{
+    color: cyan;
+}
