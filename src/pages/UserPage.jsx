@@ -17,7 +17,7 @@ export default function UserPage() {
         <Sidebar />
         <   div className='timeline'>
                 <div className="header">
-                    <h1>Page utilisateur</h1>
+                    <h1>User</h1>
                 </div>
                 <div className="image-background-profil">
                     <img src={ProfilImage} alt="" />
