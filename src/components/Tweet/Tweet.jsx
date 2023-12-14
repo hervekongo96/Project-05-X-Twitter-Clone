@@ -4,7 +4,7 @@ import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
-
+import { Link } from 'react-router-dom'
 
 export default function Tweet() {
 
@@ -14,7 +14,9 @@ export default function Tweet() {
             data.map(tweet =>(
                 <div className='tweet' key={tweet.id}>
                     <div className="tweet-avatar">
+                    <Link to={`/profils/${tweet.id}`}>
                         <img src={tweet.avatarTweet} alt="" />
+                    </Link>
                     </div>
                     <div className="tweet-content">
                         <div className="tweet-body">
