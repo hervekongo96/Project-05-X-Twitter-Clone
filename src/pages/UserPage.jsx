@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom'
 import data from '../Data/data'
 import Sidebar from '../components/Sidebar/Sidebar'
 import TrendsProfil from '../components/Profil/TrendsProfil'
-import ProfilImage from '../images/profile-photo.png'
 
 
 
@@ -15,17 +14,16 @@ export default function UserPage() {
   return (
     <>
         <Sidebar />
-        <   div className='timeline'>
+        <   div className='timeline' key={post.id}>
                 <div className="header">
                     <h1>User</h1>
                 </div>
                 <div className="image-background-profil">
-                    <img src={ProfilImage} alt="" />
-                </div>
-                <div className='tweet' key={post.id}>
                     <div className="tweet-avatar">
-                        <img src={post.avatarTweet} alt="" />
+                        <img src={post.avatarTweet} alt="avatar" />
                     </div>
+                </div>
+                <div className='tweet' >
                     <div className="tweet-content">
                         <div className="tweet-body">
                             <div className="tweet-title">
