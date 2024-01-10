@@ -1,4 +1,4 @@
-import followData from "../../Data/FollowData"
+import followData from "../../../public/Data/FollowData"
 import { useState } from "react";
 
 function TrendsFollo() {

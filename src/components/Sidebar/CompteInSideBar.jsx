@@ -1,5 +1,5 @@
 import Avatar from "../TimeLine/Avatar"
-import More2 from "../../images/More-2.svg"
+import More2 from "/images/More-2.svg"
 
 export default function CompteInSideBar() {
   return (

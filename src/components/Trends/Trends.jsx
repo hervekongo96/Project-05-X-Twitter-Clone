@@ -1,7 +1,7 @@
 import React from 'react'
 import TrendsList from './TrendsList'
-import SearchIcon  from '../../images/search.svg'
-import Settings from '../../images/Settings.svg'
+import SearchIcon  from '/images/search.svg'
+import Settings from '/images/Settings.svg'
 import TrendsFollo from './TrendsFollo'
 
 export default function Trends() {

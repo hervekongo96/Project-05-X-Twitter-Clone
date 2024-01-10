@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import data from '../Data/data'
+import data from '../../public/Data/data'
 import Sidebar from '../components/Sidebar/Sidebar'
 import TrendsProfil from '../components/Profil/TrendsProfil'
 
@@ -16,7 +16,7 @@ export default function UserPage() {
         <Sidebar />
             <div className='timeline' key={post.id}>
                 <div className="header">
-                    <h1>User</h1>
+                    <h1>{}</h1>
                 </div>
                 <div className="image-background-profil">
                     <div className="tweet-avatar">

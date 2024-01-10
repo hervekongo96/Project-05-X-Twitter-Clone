@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 
-const reacts = "src/images/React.svg"
-const liked = "src/images/Liked.svg"
+const reacts = "/images/React.svg"
+const liked = "/images/Liked.svg"
 
 
 
