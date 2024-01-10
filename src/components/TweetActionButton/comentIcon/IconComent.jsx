@@ -12,7 +12,7 @@ export default function IconComent({className,counts}) {
     };
     const divStyles = {
       color: isHovered ? '#1d9bf0' : ' ',
-      padding: '10px',
+      padding: '.625rem',
     };
 
   

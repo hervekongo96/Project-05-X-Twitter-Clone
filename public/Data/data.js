@@ -1,9 +1,9 @@
 const data = [
     {
        id:1,
-       avatarTweet:"src/images/tweet-profile-photo.png",
+       avatarTweet:"/images/tweet-profile-photo.png",
        titleTweet:"CNN",
-       certificat:"src/images/Vector.svg",
+       certificat:"/images/Vector.svg",
        detailsTitleTweet:"@CNN . ",
        time:"7m",
        textTweet:"President Joe Biden a new agreement reached with the European union to ease Trume era tariffs on aluminum and steel as a 'major breakthough' that would service to both strengthen the US steel industry and combat the global climate",
@@ -15,7 +15,7 @@ const data = [
     },
     {
         id:2,
-        avatarTweet:"src/images/image 1.svg",
+        avatarTweet:"/images/image 1.svg",
         titleTweet:"The New York Times",
         certificat:"src/images/Vector.svg",
         detailsTitleTweet:"@mytypes . ",
@@ -29,7 +29,7 @@ const data = [
      },
      {
         id:3,
-        avatarTweet:"src/images/twetter-icon.png",
+        avatarTweet:"/images/twetter-icon.png",
         titleTweet:"Twitter",
         certificat:"src/images/Vector.svg",
         detailsTitleTweet:"@Titter . ",
@@ -43,7 +43,7 @@ const data = [
      },
      {
         id:4,
-        avatarTweet:"src/images/twetter-icon.png",
+        avatarTweet:"/images/twetter-icon.png",
         titleTweet:"Twitter",
         certificat:"src/images/Vector.svg",
         detailsTitleTweet:"@Titter . ",
@@ -57,7 +57,7 @@ const data = [
      },
      {
         id:5,
-        avatarTweet:"src/images/twetter-icon.png",
+        avatarTweet:"/images/twetter-icon.png",
         titleTweet:"Twitter",
         certificat:"src/images/Vector.svg",
         detailsTitleTweet:"@Titter . ",
