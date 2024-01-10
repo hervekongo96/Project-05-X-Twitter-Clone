@@ -14,7 +14,7 @@ export default function UserPage() {
   return (
     <>
         <Sidebar />
-        <   div className='timeline' key={post.id}>
+            <div className='timeline' key={post.id}>
                 <div className="header">
                     <h1>User</h1>
                 </div>

@@ -482,60 +482,42 @@ li:hover{
 /* over-tweet-css */
 
 .tweet-action-button-over {
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 .tweet-action-button-reply:hover .tweet-action-button-over{
-    color: #92114d;
-    background-color: #200914;
-    border-radius: 30px;
-}
-
-.tweet-action-button-reply:hover .tweet-action-button-over-2{
-    color: #92114d;
-    border-radius: 30px;
-}
-
-.tweet-action-button-retweet:hover .tweet-action-button-over{
     color: #1d9bf0;
     background-color: #0a171f;
     border-radius: 30px;
 }
-
-.tweet-action-button-retweet:hover .tweet-action-button-over-2{
-    color: #1d9bf0;
-    border-radius: 30px;
-}
-
-.tweet-action-button-react:hover .tweet-action-button-over{
-    color: #00ba7c;
+.tweet-action-button-retweet:hover .tweet-action-button-over{
     background-color: #071a14;
-    border-radius: 30px;
+    border-radius: 1.875rem;
 }
 
-.tweet-action-button-react:hover .tweet-action-button-over-2{
-    color: #00ba7c;
-    border-radius: 30px;
+.tweet-action-button-react{
+    display: flex;
+}
+.image-like, .count-like {
+    padding: .500rem;
+}
+
+.tweet-action-button-react:hover .image-like{
+    background-color: #200914;
+    border-radius: 1.875rem;
 }
 
 .tweet-action-button-group:hover .tweet-action-button-over{
     color: #1d9bf0;
     background-color: #0a171f;
-    border-radius: 30px;
+    border-radius: 1.875rem;
 }
 
-.tweet-action-button-group:hover .tweet-action-button-over-2{
-    color: #1d9bf0;
-    border-radius: 30px;
-}
 
-.tweet-action-button-react{
-    display: flex;
-    gap: 10px;
-}
 /* overs des texte sur les boutton d'action tweet */
 .tweet-actions > .tweet-action-button-reply :hover{
-    color: blue;
+    color: #1d9bf0;
+    
 }
 
 .tweet-actions > .tweet-action-button-retweet :hover{
