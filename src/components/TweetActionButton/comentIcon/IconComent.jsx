@@ -11,7 +11,7 @@ export default function IconComent({className,counts}) {
   
     };
     const divStyles = {
-      color: isHovered ? 'blue' : ' ',
+      color: isHovered ? '#1d9bf0' : ' ',
       padding: '10px',
     };
 
@@ -22,7 +22,7 @@ export default function IconComent({className,counts}) {
       <span className="tweet-action-button-over">
         <span className="tweet-action-button-over-2">
           <svg width="18" height="17" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-            <path d={reply} fill={`${isHovered ? 'blue' : '#6E767D'}`}/>
+            <path d={reply} fill={`${isHovered ? '#1d9bf0' : '#6E767D'}`}/>
           </svg>
         </span>
       </span>

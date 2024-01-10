@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function TrendsFollo() {
 
-  const [isOn, setIsOn] = useState(true);
+  const [isOn, setIsOn] = useState(false);
 
   const handleClick = () => {
     setIsOn(!isOn);
