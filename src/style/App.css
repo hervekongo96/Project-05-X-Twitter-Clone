@@ -530,3 +530,24 @@ li:hover{
 .image-background-profil-user > img{
     width: 15%;
 }
+
+/* button back-up profil */
+
+.back-header{
+  display: flex;
+  gap: .625rem;  
+}
+
+.back-button{
+   padding-top: .625rem; 
+}
+
+.back-header > .back-button {
+    background-color: #0a171f2f;
+    border-radius: 1.875rem;
+}
+
+.back-button:hover{
+    filter: invert(61%) sepia(42%) saturate(5478%) hue-rotate(185deg) brightness(99%) contrast(98%);
+    cursor:pointer;
+}
