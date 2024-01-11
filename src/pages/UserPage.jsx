@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import data from '../../public/Data/data'
 import Sidebar from '../components/Sidebar/Sidebar'
 import TrendsProfil from '../components/Profil/TrendsProfil'
+import BackButton from '../components/backButton'
 
 
 
@@ -16,7 +17,14 @@ export default function UserPage() {
         <Sidebar />
             <div className='timeline' key={post.id}>
                 <div className="header">
-                    <h1>{post.auteur}</h1>
+                    <span className='back-header'>
+                        <span className="back-button">
+                            <BackButton />
+                        </span>
+                        <h1>
+                          {post.auteur}
+                        </h1>
+                    </span>
                 </div>
                 <div className="image-background-profil image-background-profil-user">
                     <img src={post.avatarTweet} alt="avatar" />
