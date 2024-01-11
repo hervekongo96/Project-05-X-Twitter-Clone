@@ -8,9 +8,6 @@ import { Link } from 'react-router-dom'
 
 export default function Tweet() {
 
-
-const certificat = "/images/Vector.svg"
-
   return (
     <>
         {
