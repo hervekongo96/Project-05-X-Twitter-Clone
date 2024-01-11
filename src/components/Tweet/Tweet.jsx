@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom'
 
 export default function Tweet() {
 
+
+const certificat = "/images/Vector.svg"
+
   return (
     <>
         {
@@ -21,8 +24,8 @@ export default function Tweet() {
                     <div className="tweet-content">
                         <div className="tweet-body">
                             <div className="tweet-title">
-                                <span className='tweet-title-author'>{tweet.titleTweet}</span>
-                                <span><img src={tweet.certificat} alt="certificated" /></span>
+                                <span className='tweet-title-author'>{tweet.auteur}</span>
+                                {tweet.certificat ? (<span><img src="/images/Vector.svg" alt="certificated" /></span>):(<span>-</span>)}
                                 <span className='tweet-title-details'>{tweet.detailsTitleTweet}</span>
                                 <span className='tweet-title-details'>{tweet.time}</span>
                             </div>
