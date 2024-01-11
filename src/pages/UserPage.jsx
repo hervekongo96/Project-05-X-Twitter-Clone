@@ -16,24 +16,27 @@ export default function UserPage() {
         <Sidebar />
             <div className='timeline' key={post.id}>
                 <div className="header">
-                    <h1>{}</h1>
+                    <h1>{post.auteur}</h1>
                 </div>
-                <div className="image-background-profil">
-                    <div className="tweet-avatar">
-                        <img src={post.avatarTweet} alt="avatar" />
-                    </div>
+                <div className="image-background-profil image-background-profil-user">
+                    <img src={post.avatarTweet} alt="avatar" />
                 </div>
-                <div className='tweet' >
-                    <div className="tweet-content">
-                        <div className="tweet-body">
-                            <div className="tweet-title">
-                                <span className='tweet-title-author'>{post.titleTweet}</span>
-                                <span><img src={post.certificat} alt="certificated" /></span>
-                                <span className='tweet-title-details'>{post.detailsTitleTweet}</span>
-                                <span className='tweet-title-details'>{post.time}</span>
-                            </div>
-                            <div className="tweet-text">
-                                {post.textTweet}
+                <div className="tweet">
+                    <div className="profil-hedear-title">
+                        <div className="userprofil">
+                            <div className="tweet-content">
+                                <div className="tweet-body">
+                                    <div className="tweet-title">
+                                        <span className='tweet-title-author'>{post.titleTweet}</span>
+                                        {post.certificat ? (<span><img src="/images/Vector.svg" alt="certificated" /></span>):(<span>-</span>)}
+                                        <span className='tweet-title-details'>{post.detailsTitleTweet}</span>
+                                        <span className='tweet-title-details'>{post.time}</span>
+                                    </div>
+                                    <div className="tweet-text">
+                                        {post.textTweet}
+                                    </div>
+                                    {post.imageTweet && <span className='tweet-image'><img src={post.imageTweet} alt=""/></span>}
+                                </div>
                             </div>
                         </div>
                     </div>
