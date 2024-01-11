@@ -20,12 +20,10 @@ export default function IconComent({className,counts}) {
   return (
     <div className={className} onClick={()=>handleMouseEnter()} style={divStyles} title='commente'>
       <span className="tweet-action-button-over">
-        <span className="tweet-action-button-over-2">
           <svg width="18" height="17" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
             <path d={reply} fill={`${isHovered ? '#1d9bf0' : '#6E767D'}`}/>
           </svg>
-        </span>
-      </span>
+      </span>   
       <span className="tweet-title-details details-count-icon-coment"  style={divStyles}>{counts}</span>
     </div>
   )

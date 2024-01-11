@@ -479,53 +479,45 @@ li:hover{
     border-radius: 2px;
 }
 
+.tweet-action-button-react{
+    display: flex;
+}
 /* over-tweet-css */
 
 .tweet-action-button-over {
     padding: 0.625rem;
 }
-
-.tweet-action-button-reply:hover .tweet-action-button-over{
-    color: #1d9bf0;
-    background-color: #0a171f;
+.tweet-action-button-reply > .tweet-action-button-over{
+    background-color: #0a171f34;
     border-radius: 30px;
 }
-.tweet-action-button-retweet:hover .tweet-action-button-over{
-    background-color: #071a14;
+.tweet-action-button-retweet > .tweet-action-button-over{
+    background-color: #071a143f;
+    border-radius: 1.875rem;
+}
+.tweet-action-button-react > .tweet-action-button-over{
+    background-color: #20091436;
     border-radius: 1.875rem;
 }
 
-.tweet-action-button-react{
-    display: flex;
-}
-.image-like, .count-like {
-    padding: .500rem;
-}
-
-.tweet-action-button-react:hover .image-like{
-    background-color: #200914;
+.tweet-action-button-group > .tweet-action-button-over{
+    background-color: #0a171f2f;
     border-radius: 1.875rem;
 }
 
-.tweet-action-button-group:hover .tweet-action-button-over{
-    color: #1d9bf0;
-    background-color: #0a171f;
-    border-radius: 1.875rem;
+.tweet-action-button-reply:hover{
+    filter: invert(61%) sepia(42%) saturate(5478%) hue-rotate(185deg) brightness(99%) contrast(98%);
+    cursor:pointer;
 }
-
-
-/* overs des texte sur les boutton d'action tweet */
-.tweet-actions > .tweet-action-button-reply :hover{
-    color: #1d9bf0;
-    
+.tweet-action-button-react:hover{
+    filter: invert(28%) sepia(93%) saturate(4177%) hue-rotate(339deg) brightness(116%) contrast(96%);
+    cursor: pointer ;
 }
-
-.tweet-actions > .tweet-action-button-retweet :hover{
-    color: green;
+.tweet-action-button-retweet:hover{
+    filter: invert(97%) sepia(52%) saturate(2839%) hue-rotate(63deg) brightness(110%) contrast(96%);
+    cursor: pointer;
 }
-.tweet-actions > .tweet-action-button-react :hover{
-    color: red;
-}
-.tweet-actions > .tweet-action-button-group :hover{
-    color: cyan;
+.tweet-action-button-group:hover{
+    filter: invert(100%) sepia(50%) saturate(2839%) hue-rotate(63deg) brightness(52%) contrast(70%);
+    cursor: pointer;
 }
