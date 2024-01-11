@@ -32,8 +32,10 @@ const divStyles = {
 
   return (
     <div className="tweet-action-button-react" title="like">
-        <div className="image-like"><img onClick={()=>{changeIcon(), handleClick()}} src={`${icon ? reacts : liked}`} /></div>
-        <div className="count-like"><span style={divStyles}>{count}</span></div>
+        <span className="tweet-action-button-over">
+            <img onClick={()=>{changeIcon(), handleClick()}} src={`${icon ? reacts : liked}`} />
+        </span>
+        <span style={divStyles}>{count}</span>
     </div>
   )
 }

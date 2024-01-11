@@ -23,12 +23,10 @@ export default function IconUpload({className,counts}) {
   return (
     <div className={className} onClick={()=>handleMouseEnter()} style={divStyles} title='upload' >
       <span className="tweet-action-button-over">
-        <span className="tweet-action-button-over-2">
           <svg width="18" height="17" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
             <path d={group1} fill={`${isHovered ? 'cyan' : '#6E767D'}`}/>
             <path d={group2} fill={`${isHovered ? 'cyan' : '#6E767D'}`}/>
           </svg>
-        </span>
       </span>
       <span className="tweet-title-details details-count-Icon-upload"  style={divStyles}>{counts}</span>
     </div>
