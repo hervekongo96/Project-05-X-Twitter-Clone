@@ -521,3 +521,12 @@ li:hover{
     filter: invert(100%) sepia(50%) saturate(2839%) hue-rotate(63deg) brightness(52%) contrast(70%);
     cursor: pointer;
 }
+
+/* userprofil-css */
+.userprofil{
+    padding-top: 5rem;
+}
+
+.image-background-profil-user > img{
+    width: 15%;
+}
