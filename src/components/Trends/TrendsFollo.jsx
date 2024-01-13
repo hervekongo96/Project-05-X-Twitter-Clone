@@ -1,4 +1,4 @@
-import follow from "../../../public/Data/initial-data.json"
+import Follow from "../../../public/Data/initial-data.json"
 import { useState } from "react";
 
 function TrendsFollo() {
@@ -13,7 +13,7 @@ function TrendsFollo() {
     return (
         <>
           {
-            follow.followData.map(follow =>(
+            Follow.followData.map(follow =>(
               <div className="follow-list" key={follow.key}>
                 <div className="follow-title">
                     <img src={follow.avatar} alt="" />

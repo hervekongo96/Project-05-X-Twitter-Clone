@@ -1,11 +1,11 @@
 import More2 from "/images/More-2.svg"
-import trendsData from "../../../public/Data/TrendsListData"
+import trendsData from "../../../public/Data/initial-data.json"
 
 function TrendsList() {
   return (
     <>
       {
-        trendsData.map(trends =>(
+        trendsData.trendsData.map(trends =>(
           <div className="trends-list" key={trends.key}>
             <div className="trends-list-title">
               <span className="tweet-title-details">{trends.title}</span>
