@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import data from '../../public/Data/data'
+import data from '../../public/Data/initial-data.json'
 import Sidebar from '../components/Sidebar/Sidebar'
 import TrendsProfil from '../components/Profil/TrendsProfil'
 import BackButton from '../components/backButton'
@@ -12,7 +12,7 @@ export default function UserPage() {
 
   const useParam = useParams()
   const {id} = useParam
-  const post = data.find((post) => post.id == id)
+  const post = data.tweet.find((post) => post.id == id)
   return (
     <>
         <Sidebar />
