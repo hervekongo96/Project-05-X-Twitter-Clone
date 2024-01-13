@@ -4,7 +4,7 @@ import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
-import tweetData from '../../../public/Data/initial-data.json'
+import tweetData from '../../Data/initial-data.json'
 
 export default function Tweet() {
 
