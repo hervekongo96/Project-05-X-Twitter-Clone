@@ -215,10 +215,6 @@ body{
 .footer-sidebar{
     margin-top: auto;
 }
-.compte-icon{
-    display: flex;
-    gap: 150px;
-}
 /* end sidebar css */
 
 /* sidebarOptions css */
@@ -269,8 +265,13 @@ li:hover{
 }
 
 .compte-in-sidebar-avatar{
-    width: 10%;
+    width: 15%;
 }
+.compte-icon{
+    display: flex;
+    gap: 90px;
+}
+
 
 /* end compte-in-sidebar-css */
 
