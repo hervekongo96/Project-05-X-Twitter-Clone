@@ -1,8 +1,8 @@
 {
-    "user": {
-      "nom": "Jean",
-      "âge": 30,
-      "actif": true
+    "currentuser": {
+      "profil": "/images/profile-photo.png",
+      "name": "Bradly Ortiz",
+      "subname": "@bradly"
     },
     "tweet": [
         {
