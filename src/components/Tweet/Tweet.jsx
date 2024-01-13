@@ -1,17 +1,17 @@
 import React from 'react'
-import data from '../../../public/Data/data'
+import { Link } from 'react-router-dom'
 import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
-import { Link } from 'react-router-dom'
+import tweetData from '../../../public/Data/initial-data.json'
 
 export default function Tweet() {
 
   return (
     <>
         {
-            data.map(tweet =>(
+            tweetData.tweet.map(tweet =>(
                 <div className='tweet' key={tweet.id}>
                     <div className="tweet-avatar">
                     <Link to={`/profils/${tweet.id}`}>
