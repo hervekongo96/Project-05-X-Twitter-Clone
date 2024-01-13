@@ -1,5 +1,5 @@
 import More2 from "/images/More-2.svg"
-import trendsData from "../../../public/Data/initial-data.json"
+import trendsData from "../../Data/initial-data.json"
 
 function TrendsList() {
   return (

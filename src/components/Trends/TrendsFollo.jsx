@@ -1,4 +1,4 @@
-import Follow from "../../../public/Data/initial-data.json"
+import Follow from "../../Data/initial-data.json"
 import { useState } from "react";
 
 function TrendsFollo() {

@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import data from '../../public/Data/initial-data.json'
+import data from '../Data/initial-data.json'
 import Sidebar from '../components/Sidebar/Sidebar'
 import TrendsProfil from '../components/Profil/TrendsProfil'
 import BackButton from '../components/backButton'
