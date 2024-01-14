@@ -121,6 +121,10 @@
             "author" :"#SQUID",
             "number" :"2,066"
          }
-    ]       
+    ],
+    "post":{
+      "post" : "posts"
+    }
+         
   }
   
