@@ -21,8 +21,8 @@ function Info() {
           </div>
           <p>President Joe Biden a new agreement reached with the European union to ease Trume era tariffs on aluminum and steel as a 'major breakthough' that would service to both strengthen the US</p>
           <div className="profil-follow">
-            <span className="tweet-title-details">13 Following</span>
-            <span className="tweet-title-details">130 Follower</span>
+            <span><span className="tweet-title-details">13 </span><span>Following</span></span>
+            <span><span className="tweet-title-details">130 </span><span>Follower</span></span>
           </div>
           <div className="sub-menu">
               <ProfilNavigation />
