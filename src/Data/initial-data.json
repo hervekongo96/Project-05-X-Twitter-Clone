@@ -122,7 +122,8 @@
             "number" :"2,066"
          }
     ],
-    "post":{
+    "posts":{
+      "id" :1,
       "post" : "posts"
     }
          
