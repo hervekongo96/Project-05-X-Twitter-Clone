@@ -1,6 +1,6 @@
 import TweetEditorButtons from "./TweetEditorButtons"
 import { useState } from "react"
-import data from "../../Data/initial-data.json"
+
 
 
 export default function TweetEditorForm() {
