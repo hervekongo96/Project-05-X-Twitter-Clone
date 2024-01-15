@@ -14,7 +14,7 @@ export default function Tweet() {
             tweetData.tweet.map(tweet =>(
                 <div className='tweet' key={tweet.id}>
                     <div className="tweet-avatar">
-                    <Link to={`/profils/${tweet.id}`}>
+                    <Link to={`/profils/${tweet.auteur}`}>
                         <img src={tweet.avatarTweet} alt="" />
                     </Link>
                     </div>
