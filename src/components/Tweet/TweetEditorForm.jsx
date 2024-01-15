@@ -21,7 +21,7 @@ export default function TweetEditorForm() {
     }
     setDataList([...dataList, newPost]);
     setPost('')
-    console.log(newPost)
+    // console.log(newPost)
   }
   return (
     <div className="tweet-editor-form" id="tweetEditor">
