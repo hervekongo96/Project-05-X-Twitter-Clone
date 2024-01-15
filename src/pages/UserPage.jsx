@@ -11,8 +11,8 @@ export default function UserPage() {
   
 
   const useParam = useParams()
-  const {id} = useParam
-  const post = data.tweet.find((post) => post.id == id)
+  const {auteur} = useParam
+  const post = data.tweet.find((post) => post.auteur == auteur)
   return (
     <>
         <Sidebar />
