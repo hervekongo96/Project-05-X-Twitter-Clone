@@ -36,7 +36,7 @@ function Info() {
             <h3>{user.name}</h3>
             <span className="tweet-title-details">{user.subname}</span>
           </div>
-          <p>President Joe Biden a new agreement reached with the European union to ease Trume era tariffs on aluminum and steel as a 'major breakthough' that would service to both strengthen the US</p>
+          <p>{user.domain}</p>
           <div className="profil-follow">
             <span><span className="tweet-title-details">13 </span><span>Following</span></span>
             <span><span className="tweet-title-details">130 </span><span>Follower</span></span>

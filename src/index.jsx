@@ -7,7 +7,8 @@ import UserProfile from './Data/initial-data.json';
 const user = {
   profil  : UserProfile.currentuser.profil,
   name    : UserProfile.currentuser.name,
-  subname : UserProfile.currentuser.subname
+  subname : UserProfile.currentuser.subname,
+  domain  : UserProfile.currentuser.domain
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
