@@ -9,9 +9,7 @@ import BackButton from '../components/backButton'
 
 export default function UserPage() {
   
-
-  const useParam = useParams()
-  const {auteur} = useParam
+  const {auteur} = useParams()
   const post = data.tweet.find((post) => post.auteur == auteur)
   return (
     <>

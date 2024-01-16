@@ -3,7 +3,6 @@ import dataTweet from '../../Data/initial-data.json'
 import TweetEditorButtons from "./TweetEditorButtons"
 
 
-
 export default function TweetEditorForm() {
   const tweet = dataTweet.tweet
   const [textTweet, setTextTweet] = useState("");
@@ -32,7 +31,6 @@ export default function TweetEditorForm() {
     setDataList([...dataList, newPost]);
     setTextTweet('')
     tweet.push(newPost)
-    console.log(dataList);
   }
   return (
     <div className="tweet-editor-form">
