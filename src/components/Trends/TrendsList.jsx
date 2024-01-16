@@ -6,7 +6,7 @@ function TrendsList() {
     <>
       {
         trendsData.trendsData.map(trends =>(
-          <div className="trends-list" key={trends.key}>
+          <div className="trends-list" key={trends.id}>
             <div className="trends-list-title">
               <span className="tweet-title-details">{trends.title}</span>
               <img src={More2} alt="" />

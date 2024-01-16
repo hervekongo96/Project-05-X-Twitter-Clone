@@ -14,7 +14,7 @@ function TrendsFollo() {
         <>
           {
             Follow.followData.map(follow =>(
-              <div className="follow-list" key={follow.key}>
+              <div className="follow-list" key={follow.id}>
                 <div className="follow-title">
                     <img src={follow.avatar} alt="" />
                     <div className="follow-list-title">
