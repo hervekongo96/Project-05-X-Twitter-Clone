@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import Avatar from "../TimeLine/Avatar"
 import More2 from "/images/More-2.svg"
-//import user from "../../Data/initial-data.json"
 import UserContext from "../../UserContext"
 
 
