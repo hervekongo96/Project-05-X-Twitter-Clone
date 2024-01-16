@@ -1,36 +1,47 @@
-import TweetEditorButtons from "./TweetEditorButtons"
 import { useState } from "react"
+import dataTweet from '../../Data/initial-data.json'
+import TweetEditorButtons from "./TweetEditorButtons"
 
 
 
 export default function TweetEditorForm() {
-
-
-  const [post, setPost] = useState("");
-  const [dataList, setDataList] = useState([]);;
+  const tweet = dataTweet.tweet
+  const [textTweet, setTextTweet] = useState("");
+  const [dataList, setDataList] = useState(tweet);
 
   const handleInputChange = (e) => {
-    setPost(e.target.value);
+    setTextTweet(e.target.value);
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
     const newPost = {
       id: Date.now(),
-      post: post
+      avatarTweet :"",
+      auteur :"Bradly Ortiz",
+      certificat : true,
+      detailsTitleTweet :"@bradly ",
+      time :"10s",
+      textTweet :textTweet,
+      imageTweet :"",
+      message :"",
+      share :"",
+      like : "",
+      upload :"" 
     }
     setDataList([...dataList, newPost]);
-    setPost('')
-    // console.log(newPost)
+    setTextTweet('')
+    tweet.push(newPost)
+    console.log(dataList);
   }
   return (
-    <div className="tweet-editor-form" id="tweetEditor">
+    <div className="tweet-editor-form">
         <form  onSubmit={handleSubmit}>
             <input 
                 type="text" 
                 placeholder="What's happening ?" 
                 className="tweet-editor-input"
-                value={post}
+                value={textTweet}
                 onChange={handleInputChange} 
             />
             <TweetEditorButtons />
