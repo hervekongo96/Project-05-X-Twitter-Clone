@@ -2,7 +2,8 @@
     "currentuser": {
       "profil": "/images/profile-photo.png",
       "name": "Bradly Ortiz",
-      "subname": "@bradly"
+      "subname": "@bradly",
+      "presentation": "je suis éveloppeur fullstack, capable de travailler à la fois sur le développement du front-end et du back-end d'une application ou d'un site web. je maîtrise les langages de programmation, les frameworks et les outils nécessaires pour concevoir des solutions logicielles complètes."
     },
     "tweet": [
         {
@@ -77,10 +78,10 @@
          },
          {
             "id" :6,
-            "avatarTweet" :"/images/twetter-icon.png",
+            "avatarTweet" :"/images/profile-photo.png",
             "auteur" :"Bradly Ortiz",
             "certificat" :true,
-            "detailsTitleTweet" :"@Titter . ",
+            "detailsTitleTweet" :"@bradly . ",
             "time" :"Oct 4",
             "textTweet" :"hello literally everyone",
             "imageTweet" :"",
