@@ -1,18 +1,22 @@
 import TweetEditorButtons from "./TweetEditorButtons"
 import { useContext, useState } from "react"
 import { TweetContext } from "../../TweetContext"
+import UserContext from "../../UserContext"
 
 
 const TweetEditorForm = () => {
 
   const { tweetData, setTweetData } = useContext(TweetContext);
   const [tweetText, setTweetText] = useState('');
+  const heure = new Date()
+  const userCurrent = useContext(UserContext)
   
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    setTweetData([...tweetData, { id: tweetData.length + 1, text: tweetText }]); // Ajouter un nouvel objet au tableau de données existant
+    setTweetData([...tweetData, { id: tweetData.length + 1,avatarTweet:`${userCurrent.profil}`,auteur:`${userCurrent.name}`,certificat: true,detailsTitleTweet:`${userCurrent.subname}`, time:`${heure.getMinutes()} sec`,  textTweet: tweetText, imageTweet:"", message:"", share:"", like:"", upload:"" }]); // Ajouter un nouvel objet au tableau de données existant
     setTweetText(''); // Réinitialiser la valeur de l'entrée
   };
+
 
   const handleInputChange = (event) => {
     setTweetText(event.target.value);
