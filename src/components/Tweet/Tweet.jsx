@@ -1,17 +1,20 @@
-import React from 'react'
+import { useContext } from 'react'
+import { TweetContext } from '../../TweetContext'
 import { Link } from 'react-router-dom'
 import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
-import tweetData from '../../Data/initial-data.json'
+
 
 export default function Tweet() {
+
+    const { tweetData } = useContext(TweetContext)
 
   return (
     <>
         {
-            tweetData.tweet.map(tweet =>(
+            tweetData.map(tweet =>(
                 <div className='tweet' key={tweet.id}>
                     <div className="tweet-avatar">
                     <Link to={`/profils/${tweet.auteur}`}>
