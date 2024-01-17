@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import { UserProvider } from './UserContext';
 import UserProfile from './Data/initial-data.json';
+import { TweetProvider } from './TweetContext';
 
 const user = {
   profil  : UserProfile.currentuser.profil,
@@ -14,7 +15,9 @@ const user = {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserProvider value={user}>
-      <App />
+      <TweetProvider>
+        <App />
+      </TweetProvider>
     </UserProvider>
   </React.StrictMode>
 );
