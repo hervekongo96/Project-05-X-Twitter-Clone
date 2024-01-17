@@ -1,5 +1,5 @@
-import { Link, useParams } from 'react-router-dom'
-import data from '../Data/initial-data.json'
+import { Link, useParams} from 'react-router-dom'
+import { useContext } from 'react'
 import Sidebar from '../components/Sidebar/Sidebar'
 import TrendsProfil from '../components/Profil/TrendsProfil'
 import BackButton from '../components/backButton'
@@ -8,15 +8,18 @@ import IconComent from '../components/TweetActionButton/comentIcon/IconComent'
 import IconLike from '../components/TweetActionButton/like/IconLike'
 import IconRetweet from '../components/TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../components/TweetActionButton/uploadIcon/IconUpload'
+import { TweetContext } from '../TweetContext'
+
 
 
 
 
 export default function UserPage() {
   
+  const { tweetData } = useContext(TweetContext)  
   const {auteur} = useParams()
-  const post = data.tweet.find((post) => post.auteur == auteur)
-  const filtrer = data.tweet.filter(filtre => filtre.auteur == post.auteur)
+  const post = tweetData.find((post) => post.auteur == auteur)
+  const filtrer = tweetData.filter(filtre => filtre.auteur == post.auteur)
 
   console.log(filtrer);
   return (
