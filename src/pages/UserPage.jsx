@@ -59,9 +59,17 @@ export default function UserPage() {
                 filtrer.map(posts => (
                     <div className="tweet">
                         <div className="profil-hedear-title">
+                            
+                        
+                  
+
                             <div className="tweet-content">
                                 <div className="tweet-body">
+                                
                                     <div className="tweet-title">
+                                    <div className="profil-icon">
+                            <img src={post.avatarTweet} alt="avatar" />
+                        </div>
                                         <span className='tweet-title-author'>{posts.auteur}</span>
                                         {posts.certificat ? (<span><img src="/images/Vector.svg" alt="certificated" /></span>):(<span>-</span>)}
                                         <span className='tweet-title-details'>{posts.detailsTitleTweet}</span>
