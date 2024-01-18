@@ -18,7 +18,7 @@ body{
 
 .timeline {
     flex: 0 0 800px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif !important;
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
 }
@@ -560,4 +560,12 @@ li:hover{
 .profil-hedear-description{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+}
+
+.profil-icon > img {
+    width: 45%;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    background-color: #181818;
+    border-radius: 100%;
 }
