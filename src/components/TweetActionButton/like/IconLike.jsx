@@ -25,20 +25,6 @@ const handleClick = () =>{
     }
 }
 
- const [data, setData] = useState(jsonData);
-
-  const handleLikeButtonClick = (tweetId) => {
-    // Trouvez l'index du tweet dans le tableau
-    const tweetIndex = data.tweet.findIndex(tweet => tweet.id === tweetId);
-    if (tweetIndex !== -1) {
-      // Créez une copie des données
-      const updatedData = { ...data };
-      // Modifiez la propriété "like" de l'objet tweet
-      updatedData.tweet[tweetIndex].like += 1;
-      // Mettez à jour l'état avec les données modifiées
-      setData(updatedData);
-    }
-  }
 
   return (
     <div className="tweet-action-button-react" title="like" onClick={()=>{changeIcon(), handleClick()}}>

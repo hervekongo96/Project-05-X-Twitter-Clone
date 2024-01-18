@@ -13,12 +13,10 @@ const TweetEditorForm = () => {
   
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (tweetText.trim() === '') {
-      return
-    } else {
-      setTweetData([...tweetData, { id: tweetData.length + 1,avatarTweet:`${userCurrent.profil}`,auteur:`${userCurrent.name}`,certificat: true,detailsTitleTweet:`${userCurrent.subname}`, time:`${heure.getMinutes()} sec`,  textTweet: tweetText, imageTweet:"", message:"", share:"", like:"", upload:"" }]); // Ajouter un nouvel objet au tableau de données existant
+    if (tweetText.trim() === '') return
+      setTweetData([...tweetData, { id: tweetData.length + 1,avatarTweet:`${userCurrent.profil}`,auteur:`${userCurrent.name}`,certificat: true,detailsTitleTweet:`${userCurrent.subname}`, time:`${heure.getMinutes()} sec`,  textTweet: tweetText, imageTweet:"", message:0, share:0, like:0, upload:0 }]); // Ajouter un nouvel objet au tableau de données existant
       setTweetText(''); // Réinitialiser la valeur de l'entrée
-    }
+    
   };
 
 
