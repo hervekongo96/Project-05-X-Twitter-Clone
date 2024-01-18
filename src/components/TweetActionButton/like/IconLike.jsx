@@ -25,6 +25,21 @@ const handleClick = () =>{
     }
 }
 
+ const [data, setData] = useState(jsonData);
+
+  const handleLikeButtonClick = (tweetId) => {
+    // Trouvez l'index du tweet dans le tableau
+    const tweetIndex = data.tweet.findIndex(tweet => tweet.id === tweetId);
+    if (tweetIndex !== -1) {
+      // Créez une copie des données
+      const updatedData = { ...data };
+      // Modifiez la propriété "like" de l'objet tweet
+      updatedData.tweet[tweetIndex].like += 1;
+      // Mettez à jour l'état avec les données modifiées
+      setData(updatedData);
+    }
+  }
+
   return (
     <div className="tweet-action-button-react" title="like" onClick={()=>{changeIcon(), handleClick()}}>
         <span className="tweet-action-button-over">
@@ -35,28 +50,6 @@ const handleClick = () =>{
   )
 }
 
-// import { useContext } from "react"
-// import { LikeContext } from "../../../LikeContext"
-
-
-// const reacts = "/images/React.svg"
-// const liked = "/images/Liked.svg"
-
-
-
-// export default function IconLike() {
-
-//     const { icon, count, changeIcon, handleClick } = useContext(LikeContext)
-
-//   return (
-//     <div className="tweet-action-button-react" title="like">
-//         <span className="tweet-action-button-over">
-//             <img onClick={() => { changeIcon(); handleClick(); }} src={`${icon ? reacts : liked}`} />
-//         </span>
-//         <span style={{ color: !icon ? 'red' : ' ', padding: '10px' }}>{count}</span>
-//     </div>
-//   )
-// }
 
 
 
