@@ -48,6 +48,9 @@ function Info() {
         {
           filtrer.map(posts => (
             <div className="tweet">
+              <div className="tweet-avatar">
+                <img src={posts.avatarTweet} alt="" />
+              </div>
               <div className="profil-hedear-title">
                 <div className="tweet-content">
                   <div className="tweet-body">
