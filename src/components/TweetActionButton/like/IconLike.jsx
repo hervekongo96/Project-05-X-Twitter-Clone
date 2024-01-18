@@ -26,9 +26,9 @@ const handleClick = () =>{
 }
 
   return (
-    <div className="tweet-action-button-react" title="like">
+    <div className="tweet-action-button-react" title="like" onClick={()=>{changeIcon(), handleClick()}}>
         <span className="tweet-action-button-over">
-            <img onClick={()=>{changeIcon(), handleClick()}} src={`${icon ? reacts : liked}`} />
+            <img src={`${icon ? reacts : liked}`} />
         </span>
         <span style={{ color: !icon ? 'red' : ' ', padding: '10px' }}>{count}</span>
     </div>
