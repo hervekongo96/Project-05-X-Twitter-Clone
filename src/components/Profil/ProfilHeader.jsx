@@ -4,7 +4,7 @@ import { useContext } from "react"
 import UserContext from "../../UserContext"
 import { Link } from "react-router-dom"
 import BackButton from "../backButton"
-import data from '../../Data/initial-data.json'
+import { TweetContext } from "../../TweetContext"
 import IconComent from "../TweetActionButton/comentIcon/IconComent"
 import IconLike from "../TweetActionButton/like/IconLike"
 import IconRetweet from "../TweetActionButton/retweetIcon/IconRetweet"
@@ -12,8 +12,9 @@ import IconUpload from "../TweetActionButton/uploadIcon/IconUpload"
 
 function Info() {
 
+  const { tweetData } = useContext(TweetContext)
   const user = useContext(UserContext)
-  const filtrer = data.tweet.filter(filtre => filtre.auteur == user.name)
+  const filtrer = tweetData.filter(filtre => filtre.auteur == user.name)
   
   return (
     <div className="timeline">
