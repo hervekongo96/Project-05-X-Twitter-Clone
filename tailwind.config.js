@@ -8,5 +8,9 @@ export default {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    // Bloquer les styles de base
+    preflight: false,
+  },
 }
 
