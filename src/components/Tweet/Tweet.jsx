@@ -3,33 +3,13 @@ import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
-import { getTweets } from '../../Api/apiRequest'
-import { useEffect, useState } from 'react'
-
+import { UpdateTweets } from '../../Api/apiRequest'
 
 
 
 export default function Tweet() {
 
-    const [tweets, setTweets] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await getTweets();
-                setTweets(data.reverse())
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        fetchData()
-
-        const interval = setInterval(() => {
-            fetchData()  
-        }, 1000);
-
-        return () => clearInterval(interval)
-    }, [])
+    const tweets = UpdateTweets()
     
   return (
     <>

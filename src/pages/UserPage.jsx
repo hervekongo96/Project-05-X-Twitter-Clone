@@ -14,7 +14,9 @@ import { TweetContext } from '../TweetContext'
 
 export default function UserPage() {
   
-  const { tweetData } = useContext(TweetContext)  
+  const { tweetData } = useContext(TweetContext)
+  
+  
   const {auteur} = useParams()
   const post = tweetData.find((post) => post.auteur == auteur)
   const filtrer = tweetData.filter(filtre => filtre.auteur == post.auteur)

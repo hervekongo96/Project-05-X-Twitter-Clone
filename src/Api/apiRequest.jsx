@@ -42,6 +42,31 @@ const getTweets = async () => {
     }
  }
 
+ //3. Update All Tweets
+const UpdateTweets = () => {
+    const [tweets, setTweets] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getTweets();
+                setTweets(data.reverse())
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData()
+
+        const interval = setInterval(() => {
+            fetchData()  
+        }, 1000);
+
+        return () => clearInterval(interval)
+    }, [])
+
+    return tweets
+}
+
  //3. get the tweet on by on
 const getTweetsByUser = async (username) => {
     return await axios.get(`http://127.0.0.1:3000/tweet/?username=${username}`)
@@ -55,4 +80,4 @@ const getTweetsByUser = async (username) => {
 
 
 
-export { addTweet, getTweets, getAllProfiles, getCurrentUser, getTweetsByUser}
+export { addTweet, getTweets, UpdateTweets, getAllProfiles, getCurrentUser, getTweetsByUser}
