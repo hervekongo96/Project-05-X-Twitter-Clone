@@ -1,0 +1,140 @@
+{
+  "currentuser": {
+    "profil": "/images/profile-photo.png",
+    "name": "Kongo Hervé",
+    "subname": "@Hervé",
+    "domain": "je suis éveloppeur fullstack, capable de travailler à la fois sur le développement du front-end et du back-end d'une application ou d'un site web. je maîtrise les langages de programmation, les frameworks et les outils nécessaires pour concevoir des solutions logicielles complètes."
+  },
+  "tweet": [
+    {
+      "id": "1",
+      "avatarTweet": "/images/twetter-icon.png",
+      "auteur": "Twitter",
+      "certificat": true,
+      "detailsTitleTweet": "@Twitter . ",
+      "time": "Oct 14",
+      "textTweet": "hello literally everyone",
+      "imageTweet": "",
+      "message": "",
+      "share": "",
+      "like": 0,
+      "upload": ""
+    },
+    {
+      "id": "2",
+      "avatarTweet": "/images/twetter-icon.png",
+      "auteur": "Twitter",
+      "certificat": true,
+      "detailsTitleTweet": "@Twitter . ",
+      "time": "Oct 4",
+      "textTweet": "hello literally everyone",
+      "imageTweet": "",
+      "message": "118.7K",
+      "share": "785.4K",
+      "like": 333,
+      "upload": ""
+    },
+    {
+      "id": "3",
+      "avatarTweet": "/images/twetter-icon.png",
+      "auteur": "Twitter",
+      "certificat": true,
+      "detailsTitleTweet": "@Titter . ",
+      "time": "Oct 30",
+      "textTweet": "BIG NEWS lol jk still Twitter",
+      "imageTweet": "",
+      "message": "6.8K",
+      "share": "36.6K",
+      "like": 267,
+      "upload": ""
+    },
+    {
+      "id": "4",
+      "avatarTweet": "/images/image 1.svg",
+      "auteur": "The New York Times",
+      "certificat": true,
+      "detailsTitleTweet": "@mytypes . ",
+      "time": "2H",
+      "textTweet": "Gardening boomed during the pandemic. Six Black writers share how has helped them re-establish, and reimagine, a connection to cultivation and the land",
+      "imageTweet": "/images/tweet-image.png",
+      "message": "19",
+      "share": "48",
+      "like": 482,
+      "upload": "19"
+    },
+    {
+      "id": "5",
+      "avatarTweet": "/images/tweet-profile-photo.png",
+      "auteur": "CNN",
+      "certificat": true,
+      "detailsTitleTweet": "@CNN . ",
+      "time": "7m",
+      "textTweet": "President Joe Biden a new agreement reached with the European union to ease Trume era tariffs on aluminum and steel as a 'major breakthough' that would service to both strengthen the US steel industry and combat the global climate",
+      "imageTweet": "",
+      "message": "57",
+      "share": "144",
+      "like": 184,
+      "upload": ""
+    },
+    {
+      "id": "6",
+      "avatarTweet": "/images/profile-photo.png",
+      "auteur": "Kongo Hervé",
+      "certificat": true,
+      "detailsTitleTweet": "@Hervé . ",
+      "time": "Janv 16",
+      "textTweet": "L'intelligence artificielle (IA) est une technologie qui permet aux machines d'effectuer des tâches qui nécessitent normalement l'intelligence humaine. Elle repose sur des algorithmes et des modèles mathématiques pour apprendre à partir de données, prendre des décisions, résoudre des problèmes et comprendre des langages naturels. L'IA est utilisée dans de nombreux domaines tels que la santé, la finance, la logistique, l'automobile et les jeux vidéo. Elle peut être classée en deux catégories principales : l'IA faible (ou étroite) qui se concentre sur des tâches spécifiques, et l'IA forte (ou générale) qui vise à reproduire l'intelligence humaine dans sa globalité. L'IA soulève également des questions éthiques et sociales liées à son impact sur l'emploi, la vie privée et la sécurité.",
+      "imageTweet": "/images/robot.png",
+      "message": "2M",
+      "share": "3M",
+      "like": 4000,
+      "upload": "1K"
+    }
+  ],
+  "followData": [
+    {
+      "id": "1",
+      "avatar": "/images/image 1.svg",
+      "title": "Trebding in Turkey",
+      "author": "@nytimes"
+    },
+    {
+      "id": "2",
+      "avatar": "/images/tweet-profile-photo.png",
+      "title": "Trebding in Turkey",
+      "author": "@CNN"
+    },
+    {
+      "id": "3",
+      "avatar": "/images/twetter-icon.png",
+      "title": "Trebding in Turkey",
+      "author": "@Twitter"
+    }
+  ],
+  "trendsData": [
+    {
+      "id": "1",
+      "title": "Trebding in Turkey",
+      "author": "#SQUID",
+      "number": "2,066"
+    },
+    {
+      "id": "2",
+      "title": "Trebding in Turkey",
+      "author": "#SQUID",
+      "number": "2,066"
+    },
+    {
+      "id": "3",
+      "title": "Trebding in Turkey",
+      "author": "#SQUID",
+      "number": "2,066"
+    },
+    {
+      "id": "4",
+      "title": "Trebding in Turkey",
+      "author": "#SQUID",
+      "number": "2,066"
+    }
+  ]
+}
