@@ -1,20 +1,40 @@
-import { useContext } from 'react'
-import { TweetContext } from '../../TweetContext'
 import { Link } from 'react-router-dom'
 import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
+import { getTweets } from '../../Api/apiRequest'
+import { useEffect, useState } from 'react'
+
+
 
 
 export default function Tweet() {
 
-    const { tweetData } = useContext(TweetContext)
+    const [tweets, setTweets] = useState([]);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getTweets();
+                setTweets(data.reverse())
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData()
+
+        const interval = setInterval(() => {
+            fetchData()  
+        }, 1000);
+
+        return () => clearInterval(interval)
+    }, [])
+    
   return (
     <>
         {
-            tweetData.map(tweet =>(
+            tweets.map(tweet =>(
                 <div className='flex justify-start items-start gap-5 p-6 tweet' key={tweet.id}>
                     <div className="tweet-avatar">
                     <Link to={`/profils/${tweet.auteur}`}>
@@ -37,7 +57,7 @@ export default function Tweet() {
                         <div className="flex justify-center items-center gap-20 text-gray-500 text-base">
                             <IconComent counts={tweet.message} className={'tweet-action-button-reply'}/>
                             <IconRetweet counts={tweet.share} className={'tweet-action-button-retweet'}/>
-                            <IconLike counts={tweet.like} className={'tweet-action-button-react'} />
+                            <IconLike tweetId={tweet.id} initialCount ={tweet.like} className={'tweet-action-button-react'} />
                             <IconUpload counts={tweet.upload} className={'tweet-action-button-group'}/>
                         </div>
                     </div>

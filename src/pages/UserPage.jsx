@@ -12,8 +12,6 @@ import { TweetContext } from '../TweetContext'
 
 
 
-
-
 export default function UserPage() {
   
   const { tweetData } = useContext(TweetContext)  
@@ -78,7 +76,7 @@ export default function UserPage() {
                                 <div className="tweet-actions">
                                     <IconComent counts={posts.message} className={'tweet-action-button-reply'}/>
                                     <IconRetweet counts={posts.share} className={'tweet-action-button-retweet'}/>
-                                    <IconLike counts={posts.like} className={'tweet-action-button-react'} />
+                                    <IconLike tweetId={posts.id} initialCount ={posts.like} className={'tweet-action-button-react'} />
                                     <IconUpload counts={posts.upload} className={'tweet-action-button-group'}/>
                                 </div>
                             </div>

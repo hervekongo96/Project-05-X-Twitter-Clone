@@ -1,4 +1,3 @@
-// TweetContext.js
 import React, { createContext, useState } from 'react';
 import initialData from "./Data/initial-data.json"
 
