@@ -89,6 +89,48 @@
       "share": "3M",
       "like": 4000,
       "upload": "1K"
+    },
+    {
+      "id": 7,
+      "avatarTweet": "/images/profile-photo.png",
+      "auteur": "Kongo Hervé",
+      "certificat": true,
+      "detailsTitleTweet": "@Hervé",
+      "time": "mercredi 7 février 2024",
+      "textTweet": "Le terme \"big data\" fait référence à de grandes quantités de données complexes et volumineuses qui sont traitées et analysées pour en extraire des informations utiles. Les entreprises utilisent le big",
+      "imageTweet": "",
+      "message": 0,
+      "share": 0,
+      "like": 0,
+      "upload": 0
+    },
+    {
+      "id": 8,
+      "avatarTweet": "/images/profile-photo.png",
+      "auteur": "Kongo Hervé",
+      "certificat": true,
+      "detailsTitleTweet": "@Hervé",
+      "time": "mercredi 7 février 2024",
+      "textTweet": "match rdc",
+      "imageTweet": "",
+      "message": 0,
+      "share": 0,
+      "like": 0,
+      "upload": 0
+    },
+    {
+      "id": 9,
+      "avatarTweet": "/images/profile-photo.png",
+      "auteur": "Kongo Hervé",
+      "certificat": true,
+      "detailsTitleTweet": "@Hervé",
+      "time": "mercredi 7 février 2024",
+      "textTweet": "oui match",
+      "imageTweet": "",
+      "message": 0,
+      "share": 0,
+      "like": 0,
+      "upload": 0
     }
   ],
   "followData": [
