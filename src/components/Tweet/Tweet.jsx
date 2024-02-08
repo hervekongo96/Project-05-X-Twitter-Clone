@@ -9,7 +9,7 @@ import { UpdateTweets } from '../../Api/apiRequest'
 
 export default function Tweet() {
 
-    const tweets = UpdateTweets()
+const tweets = UpdateTweets()
     
   return (
     <>

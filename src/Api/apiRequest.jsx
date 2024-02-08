@@ -64,12 +64,13 @@ const UpdateTweets = () => {
         return () => clearInterval(interval)
     }, [])
 
+
     return tweets
 }
 
- //3. get the tweet on by on
-const getTweetsByUser = async (username) => {
-    return await axios.get(`http://127.0.0.1:3000/tweet/?username=${username}`)
+ //4. get the tweet on by on
+const getTweetsByUser = async (auteur) => {
+    return await axios.get(`http://127.0.0.1:3000/tweet/?auteur=${auteur}`)
     .then(response => {
         return response.data;
     })
