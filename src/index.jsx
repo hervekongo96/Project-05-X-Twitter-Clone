@@ -2,9 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import { UserProvider } from './UserContext';
-import UserProfile from './Data/initial-data.json';
+import UserProfile from '../public/images/initial-data.json';
 import { TweetProvider } from './TweetContext';
-import { LikeProvider } from './LikeContext';
 
 
 const user = {
@@ -18,9 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserProvider value={user}>
       <TweetProvider>
-        <LikeProvider>
-          <App />
-        </LikeProvider>
+        <App />
       </TweetProvider>
     </UserProvider>
   </React.StrictMode>

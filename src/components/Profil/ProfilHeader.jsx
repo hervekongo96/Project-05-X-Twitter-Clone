@@ -12,7 +12,7 @@ import IconUpload from "../TweetActionButton/uploadIcon/IconUpload"
 
 function Info() {
 
-  const { tweetData } = useContext(TweetContext)
+  const  tweetData  = useContext(TweetContext)
   const user = useContext(UserContext)
   const filtrer = tweetData.filter(filtre => filtre.auteur == user.name)
   
@@ -69,7 +69,7 @@ function Info() {
                   <div className="tweet-actions">
                     <IconComent counts={posts.message} className={'tweet-action-button-reply'}/>
                     <IconRetweet counts={posts.share} className={'tweet-action-button-retweet'}/>
-                    <IconLike counts={posts.like} className={'tweet-action-button-react'} />
+                    <IconLike tweetId={posts.id} initialCount ={posts.like} className={'tweet-action-button-react'} />
                     <IconUpload counts={posts.upload} className={'tweet-action-button-group'}/>
                   </div>
                 </div>

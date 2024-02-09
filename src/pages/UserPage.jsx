@@ -12,16 +12,13 @@ import { TweetContext } from '../TweetContext'
 
 
 
-
-
 export default function UserPage() {
-  
-  const { tweetData } = useContext(TweetContext)  
-  const {auteur} = useParams()
-  const post = tweetData.find((post) => post.auteur == auteur)
-  const filtrer = tweetData.filter(filtre => filtre.auteur == post.auteur)
 
-  console.log(filtrer);
+const {auteur} = useParams()
+const tweetData = useContext(TweetContext)
+const post = tweetData.find((post) => post.auteur == auteur)
+const tweet = tweetData.filter(filtre => filtre.auteur == post.auteur)
+
   return (
     <>
         <Sidebar />
@@ -56,8 +53,8 @@ export default function UserPage() {
                 </div>
             </div>
             {
-                filtrer.map(posts => (
-                    <div className="tweet">
+                tweet.map(posts => (
+                    <div className="tweet" key={posts.id}>
                         <div className="tweet-avatar">
                            <img src={posts.avatarTweet} alt="" />
                         </div>
@@ -78,7 +75,7 @@ export default function UserPage() {
                                 <div className="tweet-actions">
                                     <IconComent counts={posts.message} className={'tweet-action-button-reply'}/>
                                     <IconRetweet counts={posts.share} className={'tweet-action-button-retweet'}/>
-                                    <IconLike counts={posts.like} className={'tweet-action-button-react'} />
+                                    <IconLike tweetId={posts.id} initialCount ={posts.like} className={'tweet-action-button-react'} />
                                     <IconUpload counts={posts.upload} className={'tweet-action-button-group'}/>
                                 </div>
                             </div>
