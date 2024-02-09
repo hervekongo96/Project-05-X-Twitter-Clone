@@ -1,5 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { getTweets } from './Api/apiRequest';
+import React, { createContext, useState, useEffect } from 'react';
+import { getTweets } from './Api/apiRequest';
 
 
 export const TweetContext = createContext();
