@@ -3,14 +3,14 @@ import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
-import { UpdateTweets } from '../../Api/apiRequest'
-
+import { useContext } from 'react'
+import { TweetContext } from '../../TweetContext'
 
 
 export default function Tweet() {
 
-const tweets = UpdateTweets()
-    
+const tweets = useContext(TweetContext) 
+
   return (
     <>
         {

@@ -1,17 +1,32 @@
-import React, { createContext, useState } from 'react';
-import initialData from "./Data/initial-data.json"
-
+import React, { createContext, useState, useEffect } from 'react';
+import { getTweets } from './Api/apiRequest';
 
 export const TweetContext = createContext();
 
 export const TweetProvider = ({children}) => {
 
-  const initialDataTweet = initialData.tweet
+  const [tweets, setTweets] = useState([]);
 
-  const [tweetData, setTweetData] = useState(initialDataTweet);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getTweets();
+                setTweets(data.reverse())
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData()
+
+        const interval = setInterval(() => {
+            fetchData()  
+        }, 1000);
+
+        return () => clearInterval(interval)
+    }, [])
 
   return (
-    <TweetContext.Provider value={{ tweetData, setTweetData }}>
+    <TweetContext.Provider value={tweets}>
       {children}
     </TweetContext.Provider>
   );

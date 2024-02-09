@@ -1,36 +1,14 @@
-import { useContext, useState } from "react"
+import { useContext} from "react"
 import TweetEditorButtons from "./TweetEditorButtons"
-import tweetData from '../../../public/initial-data.json'
-// import { TweetContext } from "../../TweetContext"
 import UserContext from "../../UserContext"
 import { useForm } from "react-hook-form"
 import { addTweet } from "../../Api/apiRequest"
 
 const TweetEditorForm = () => {
 
-  // const { tweetData, setTweetData } = useContext(TweetContext);
-  // const [tweetText, setTweetText] = useState('');
-  // const heure = new Date()
   const userCurrent = useContext(UserContext)
 
   const { register, handleSubmit, formState : {errors} } = useForm()
-
-    
-  
-  // const handleFormSubmit = (event) => {
-  //   if (tweetText.trim() === '') return
-  //    // Ajouter un nouvel objet au tableau de données existant 
-  //   setTweetData([newTweet, ...tweetData]); 
-  //    // Réinitialiser la valeur de l'entrée 
-  //   setTweetText(''); 
-  //   event.preventDefault();
-  // };
-
-  // const handleInputChange = (event) => {
-  //   setTweetText(event.target.value);
-  // };
-
-  
 
   function afficherDate() {
     let date = new Date();
@@ -40,12 +18,9 @@ const TweetEditorForm = () => {
   }
   
 
-  const onFormSubmit = async (data, event) => {
+  const onFormSubmit = (data, event) => {
     // create a new tweet object
-    event.preventDefault();
-    event.target.reset()
     const newTweet = {
-      id: tweetData.tweet.length + 1,
       avatarTweet: `${userCurrent.profil}`,
       auteur: `${userCurrent.name}`,
       certificat: true,
@@ -58,7 +33,9 @@ const TweetEditorForm = () => {
       like: 0,
       upload: 0
     };
-    await addTweet(newTweet)
+    addTweet(newTweet)
+    event.preventDefault();
+    event.target.reset()
 };
 
   return (
@@ -66,10 +43,10 @@ const TweetEditorForm = () => {
       <input type="text" autoComplete="off" className="tweet-editor-input" placeholder="What's happening?" 
         {...register("tweetText",{
           required : "Ce champ est obligatoire",
-          maxLength : {value : 200, message : "Le tweet ne peut comprendre que 200 caractères"}
+          maxLength : {value : 300, message : "La taille maxiamle de tweet vaut 300 caractères"}
         })}              
       />
-      <p>{errors.tweetText?.message}</p>
+      <span>{errors.tweetText?.message}</span>
       <TweetEditorButtons />
     </form>
   )

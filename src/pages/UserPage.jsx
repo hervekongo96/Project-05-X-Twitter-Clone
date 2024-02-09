@@ -9,20 +9,15 @@ import IconLike from '../components/TweetActionButton/like/IconLike'
 import IconRetweet from '../components/TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../components/TweetActionButton/uploadIcon/IconUpload'
 import { TweetContext } from '../TweetContext'
-import { UpdateTweets } from '../Api/apiRequest'
 
 
 
 export default function UserPage() {
-  
-const { tweetData } = useContext(TweetContext)
 
-  
 const {auteur} = useParams()
+const tweetData = useContext(TweetContext)
 const post = tweetData.find((post) => post.auteur == auteur)
-
-const posts = UpdateTweets().find((post) => post.auteur == auteur)
-const tweet = UpdateTweets().filter(filtre => filtre.auteur == posts.auteur)
+const tweet = tweetData.filter(filtre => filtre.auteur == post.auteur)
 
   return (
     <>
@@ -59,7 +54,7 @@ const tweet = UpdateTweets().filter(filtre => filtre.auteur == posts.auteur)
             </div>
             {
                 tweet.map(posts => (
-                    <div className="tweet">
+                    <div className="tweet" key={posts.id}>
                         <div className="tweet-avatar">
                            <img src={posts.avatarTweet} alt="" />
                         </div>

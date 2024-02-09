@@ -12,7 +12,7 @@ import IconUpload from "../TweetActionButton/uploadIcon/IconUpload"
 
 function Info() {
 
-  const { tweetData } = useContext(TweetContext)
+  const  tweetData  = useContext(TweetContext)
   const user = useContext(UserContext)
   const filtrer = tweetData.filter(filtre => filtre.auteur == user.name)
   
