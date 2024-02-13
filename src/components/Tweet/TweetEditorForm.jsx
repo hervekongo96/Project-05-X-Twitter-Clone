@@ -1,6 +1,6 @@
 import { useContext} from "react"
 import TweetEditorButtons from "./TweetEditorButtons"
-import UserContext from "../../UserContext"
+import {UserContext} from "../../UserContext"
 import { useForm } from "react-hook-form"
 import { addTweet } from "../../Api/apiRequest"
 
@@ -30,7 +30,7 @@ const TweetEditorForm = () => {
       imageTweet: "",
       message: 0,
       share: 0,
-      like: 0,
+      like: 1,
       upload: 0
     };
     addTweet(newTweet)

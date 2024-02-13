@@ -1,7 +1,7 @@
 import PageTitle from "../Header/PageTitle"
 import ProfilNavigation from "./ProfilNavigation"
 import { useContext } from "react"
-import UserContext from "../../UserContext"
+import { UserContext } from "../../UserContext"
 import { Link } from "react-router-dom"
 import BackButton from "../backButton"
 import { TweetContext } from "../../TweetContext"
