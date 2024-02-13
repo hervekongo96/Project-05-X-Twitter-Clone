@@ -1,12 +1,15 @@
 import { useContext} from "react"
 import TweetEditorButtons from "./TweetEditorButtons"
 import {UserContext} from "../../UserContext"
+import { TweetContext } from "../../TweetContext"
 import { useForm } from "react-hook-form"
 import { addTweet } from "../../Api/apiRequest"
 
 const TweetEditorForm = () => {
 
-  const userCurrent = useContext(UserContext)
+  const userCurrent = useContext(UserContext);
+  const lengthTweet = useContext(TweetContext)
+
 
   const { register, handleSubmit, formState : {errors} } = useForm()
 
@@ -21,6 +24,7 @@ const TweetEditorForm = () => {
   const onFormSubmit = (data, event) => {
     // create a new tweet object
     const newTweet = {
+      id: lengthTweet.length + 1,
       avatarTweet: `${userCurrent.profil}`,
       auteur: `${userCurrent.name}`,
       certificat: true,
