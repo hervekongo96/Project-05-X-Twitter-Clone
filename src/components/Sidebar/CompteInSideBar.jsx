@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Avatar from "../TimeLine/Avatar"
 import More2 from "/images/More-2.svg"
-import UserContext from "../../UserContext"
+import {UserContext} from "../../UserContext"
 
 
 export default function CompteInSideBar() {

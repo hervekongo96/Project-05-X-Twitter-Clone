@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // getting Current user 
 const getCurrentUser = async () => {
-    return await axios.get(`http://localhost:3000/currentuser`)
+    return await axios.get(`http://127.0.0.1:3000/currentuser`)
     .then(response => {
         return response.data;
     })

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Avatar from "../TimeLine/Avatar"
 import TweetEditorForm from "./TweetEditorForm";
-import UserContext from "../../UserContext";
+import {UserContext} from "../../UserContext";
 
 export default function TweetEditor() {
 
