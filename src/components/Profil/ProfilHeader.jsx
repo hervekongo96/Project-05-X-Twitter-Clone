@@ -1,7 +1,11 @@
 import PageTitle from "../Header/PageTitle"
 import ProfilNavigation from "./ProfilNavigation"
 import { useContext } from "react"
+<<<<<<< HEAD
 import UserContext from "../../UserContext"
+=======
+import { UserContext } from "../../UserContext"
+>>>>>>> Dev-v4
 import { Link } from "react-router-dom"
 import BackButton from "../backButton"
 import { TweetContext } from "../../TweetContext"
@@ -12,7 +16,11 @@ import IconUpload from "../TweetActionButton/uploadIcon/IconUpload"
 
 function Info() {
 
+<<<<<<< HEAD
   const { tweetData } = useContext(TweetContext)
+=======
+  const  tweetData  = useContext(TweetContext)
+>>>>>>> Dev-v4
   const user = useContext(UserContext)
   const filtrer = tweetData.filter(filtre => filtre.auteur == user.name)
   
@@ -69,7 +77,11 @@ function Info() {
                   <div className="tweet-actions">
                     <IconComent counts={posts.message} className={'tweet-action-button-reply'}/>
                     <IconRetweet counts={posts.share} className={'tweet-action-button-retweet'}/>
+<<<<<<< HEAD
                     <IconLike counts={posts.like} className={'tweet-action-button-react'} />
+=======
+                    <IconLike tweetId={posts.id} initialCount ={posts.like} className={'tweet-action-button-react'} />
+>>>>>>> Dev-v4
                     <IconUpload counts={posts.upload} className={'tweet-action-button-group'}/>
                   </div>
                 </div>

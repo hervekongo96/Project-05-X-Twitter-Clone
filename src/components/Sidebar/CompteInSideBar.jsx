@@ -1,7 +1,11 @@
 import { useContext } from "react";
 import Avatar from "../TimeLine/Avatar"
 import More2 from "/images/More-2.svg"
+<<<<<<< HEAD
 import UserContext from "../../UserContext"
+=======
+import {UserContext} from "../../UserContext"
+>>>>>>> Dev-v4
 
 
 export default function CompteInSideBar() {

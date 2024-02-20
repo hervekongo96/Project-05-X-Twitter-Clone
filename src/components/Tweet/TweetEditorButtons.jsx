@@ -12,7 +12,11 @@ export default function TweetEditorButtons() {
         <TweetEditorActions url={"/images/Group.svg"} />
         <TweetEditorActions url={"/images/Schedule.svg"} />
       </div>
+<<<<<<< HEAD
         <Button value={"Tweet"} className={"button"}/>
+=======
+        <Button value={"Tweet"} className={"button"} />
+>>>>>>> Dev-v4
     </div>
   )
 }

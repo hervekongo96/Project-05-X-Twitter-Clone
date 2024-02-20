@@ -1,20 +1,36 @@
+<<<<<<< HEAD
 import { useContext } from 'react'
 import { TweetContext } from '../../TweetContext'
+=======
+>>>>>>> Dev-v4
 import { Link } from 'react-router-dom'
 import IconComent from '../TweetActionButton/comentIcon/IconComent'
 import IconLike from '../TweetActionButton/like/IconLike'
 import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
+<<<<<<< HEAD
+=======
+import { useContext } from 'react'
+import { TweetContext } from '../../TweetContext'
+>>>>>>> Dev-v4
 
 
 export default function Tweet() {
 
+<<<<<<< HEAD
     const { tweetData } = useContext(TweetContext)
+=======
+const tweets = useContext(TweetContext) 
+>>>>>>> Dev-v4
 
   return (
     <>
         {
+<<<<<<< HEAD
             tweetData.map(tweet =>(
+=======
+            tweets.map(tweet =>(
+>>>>>>> Dev-v4
                 <div className='flex justify-start items-start gap-5 p-6 tweet' key={tweet.id}>
                     <div className="tweet-avatar">
                     <Link to={`/profils/${tweet.auteur}`}>
@@ -37,7 +53,11 @@ export default function Tweet() {
                         <div className="flex justify-center items-center gap-20 text-gray-500 text-base">
                             <IconComent counts={tweet.message} className={'tweet-action-button-reply'}/>
                             <IconRetweet counts={tweet.share} className={'tweet-action-button-retweet'}/>
+<<<<<<< HEAD
                             <IconLike counts={tweet.like} className={'tweet-action-button-react'} />
+=======
+                            <IconLike tweetId={tweet.id} initialCount ={tweet.like} className={'tweet-action-button-react'} />
+>>>>>>> Dev-v4
                             <IconUpload counts={tweet.upload} className={'tweet-action-button-group'}/>
                         </div>
                     </div>

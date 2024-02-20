@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+<<<<<<< HEAD
 import { UserProvider } from './UserContext';
 import UserProfile from './Data/initial-data.json';
 import { TweetProvider } from './TweetContext';
@@ -21,6 +22,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <LikeProvider>
           <App />
         </LikeProvider>
+=======
+import { TweetProvider } from './TweetContext';
+import { UserProvider } from './UserContext';
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <UserProvider>
+      <TweetProvider>
+        <App />
+>>>>>>> Dev-v4
       </TweetProvider>
     </UserProvider>
   </React.StrictMode>
