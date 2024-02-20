@@ -6,7 +6,6 @@ import { useContext } from "react"
 export default function Header() {
 
   const user = useContext(UserContext)
-
   return (
     <div className="header">
         <PageTitle texte={user.name} />
