@@ -18,11 +18,11 @@ export const TweetProvider = ({children}) => {
         }
         fetchData()
 
-        // const interval = setInterval(() => {
-        //     fetchData()  
-        // }, 2000);
+        const interval = setInterval(() => {
+            fetchData()  
+        }, 2000);
 
-        // return () => clearInterval(interval)
+        return () => clearInterval(interval)
     }, [])
 
   return (

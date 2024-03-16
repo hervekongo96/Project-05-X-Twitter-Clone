@@ -1,9 +1,9 @@
-import { useContext} from "react"
-import TweetEditorButtons from "./TweetEditorButtons"
-import {UserContext} from "../../UserContext"
-import { TweetContext } from "../../TweetContext"
-import { useForm } from "react-hook-form"
-import { addTweet } from "../../Api/apiRequest"
+import { useContext} from "react";
+import TweetEditorButtons from "./TweetEditorButtons";
+import {UserContext} from "../../UserContext";
+import { TweetContext } from "../../TweetContext";
+import { useForm } from "react-hook-form";
+import { addTweet } from "../../Api/apiRequest";
 
 const TweetEditorForm = () => {
 
@@ -22,22 +22,33 @@ const TweetEditorForm = () => {
   
 
   const onFormSubmit = (data, event) => {
-    // create a new tweet object
-    const newTweet = {
+
+    const newT = {
       id: lengthTweet.length + 1,
-      avatarTweet: `${userCurrent.profil}`,
-      auteur: `${userCurrent.name}`,
-      certificat: true,
-      detailsTitleTweet: `${userCurrent.subname}`,
-      time: `${ afficherDate() }`,
-      textTweet: data.tweetText,
-      imageTweet: "",
-      message: 0,
-      share: 0,
-      like: 1,
-      upload: 0
-    };
-    addTweet(newTweet)
+      author: 8,
+      media: [],
+      retweetCount: 1,
+      favoriteCount: 1,
+      repliesCount: 1,
+      text: data.tweetText,
+      createdAt: `${ afficherDate() }`,
+      handle: "@daRiddla",
+      name: "Riddle Gallagher",
+      profilePicture: "https://i.pravatar.cc/300?img=17",
+      profileBackground: "https://picsum.photos/4128/1946.jpg"
+    }
+
+    fetch('https://twitter-clone-c1-hervekongo96.onrender.com/tweets', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newT),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Réponse du serveur :', data);
+    });
     event.preventDefault();
     event.target.reset()
 };
