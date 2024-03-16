@@ -11,18 +11,18 @@ export const TweetProvider = ({children}) => {
         const fetchData = async () => {
             try {
                 const data = await getTweets();
-                setTweets(data.reverse())
+                setTweets(data)
             } catch (error) {
                 console.log(error);
             }
         }
         fetchData()
 
-        const interval = setInterval(() => {
-            fetchData()  
-        }, 1000);
+        // const interval = setInterval(() => {
+        //     fetchData()  
+        // }, 2000);
 
-        return () => clearInterval(interval)
+        // return () => clearInterval(interval)
     }, [])
 
   return (

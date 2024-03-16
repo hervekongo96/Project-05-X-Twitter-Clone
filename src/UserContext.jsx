@@ -4,25 +4,22 @@ import { getCurrentUser } from "./Api/apiRequest";
 const UserContext = createContext();
 
 const UserProvider = ({children}) => {
-    const [currentuser, setCurrentuser] = useState({
-        profil: '',
-        name: '',
-        subname: '',
-        domaine: ''
-    })
+    const [currentuser, setCurrentuser] = useState({})
 
     useEffect(() => {
         const fectCurrentUser = async () => {
             try {
                 const user = await getCurrentUser();
-                setCurrentuser(user)
+                const loggedUserId = user.loggedInUserId;
+                const allUsers = user.users;
+                const userConnect = allUsers.find(item => item.id === loggedUserId)
+                setCurrentuser(userConnect)
             } catch (error) {
                 console.log(error);
             }
         }
         fectCurrentUser();
     },[])
-    console.log("context:",currentuser);
     return(
         <UserContext.Provider value={currentuser}>
             {children}

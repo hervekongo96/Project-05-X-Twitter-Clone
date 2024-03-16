@@ -9,7 +9,7 @@ export default function TweetEditor() {
 
   return (
     <div className="tweet-editor">
-        <Avatar src={user.profil} url={"/profil"} />
+        <Avatar src={user.profilePicture} url={"/profil"} />
         <TweetEditorForm />
     </div>
   )

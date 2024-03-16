@@ -5,11 +5,13 @@ import IconRetweet from '../TweetActionButton/retweetIcon/IconRetweet'
 import IconUpload from '../TweetActionButton/uploadIcon/IconUpload'
 import { useContext } from 'react'
 import { TweetContext } from '../../TweetContext'
+import moment from 'moment/moment'
+
 
 
 export default function Tweet() {
 
-const tweets = useContext(TweetContext) 
+const tweets = useContext(TweetContext);
 
   return (
     <>
@@ -17,27 +19,29 @@ const tweets = useContext(TweetContext)
             tweets.map(tweet =>(
                 <div className='flex justify-start items-start gap-5 p-6 tweet' key={tweet.id}>
                     <div className="tweet-avatar">
-                    <Link to={`/profils/${tweet.auteur}`}>
-                        <img src={tweet.avatarTweet} alt="" />
+                    <Link to={`/profils/${tweet.name}`}>
+                        <img src={tweet.profilePicture} alt="" />
                     </Link>
                     </div>
                     <div className="flex flex-col items-start justify-start gap-8 w-full">
                         <div className="flex flex-col gap-2">
                             <div className="flex justify-start items-start gap-2 text-base">
-                                <span className='tweet-title-author'>{tweet.auteur}</span>
-                                {tweet.certificat ? (<span><img src="/images/Vector.svg" alt="certificated" /></span>):(<span>-</span>)}
-                                <span className='text-gray-600'>{tweet.detailsTitleTweet}</span>
-                                <span className='text-gray-600'>{tweet.time}</span>
+                                <span className='tweet-title-author'>{tweet.name}</span>
+                                {tweet.handle ? (<span><img src="/images/Vector.svg" alt="certificated" /></span>):(<span>-</span>)}
+                                <span className='text-gray-600'>{tweet.handle}</span>
+                                <span className='text-gray-600'>{moment(tweet.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</span>
                             </div>
                             <div className="text-gray-300 text-base">
-                                {tweet.textTweet}
+                                {tweet.text}
                             </div>
-                            {tweet.imageTweet && <img src={tweet.imageTweet} alt="" className='max-w-full h-auto rounded-3xl border-2 border-gray-700'/>}
+                            {
+                                tweet.media.length > 0 ? <img key={tweet.id} src={tweet.media[0]} alt={`Image ${tweet.id}`} className='max-w-full h-60 object-cover rounded-3xl border-2 border-gray-700'/> : tweet.media
+                            }
                         </div>
                         <div className="flex justify-center items-center gap-20 text-gray-500 text-base">
-                            <IconComent counts={tweet.message} className={'tweet-action-button-reply'}/>
-                            <IconRetweet counts={tweet.share} className={'tweet-action-button-retweet'}/>
-                            <IconLike tweetId={tweet.id} initialCount ={tweet.like} className={'tweet-action-button-react'} />
+                            <IconComent counts={tweet.favoriteCount} className={'tweet-action-button-reply'}/>
+                            <IconRetweet counts={tweet.retweetCount} className={'tweet-action-button-retweet'}/>
+                            <IconLike tweetId={tweet.id} initialCount ={tweet.repliesCount} className={'tweet-action-button-react'} />
                             <IconUpload counts={tweet.upload} className={'tweet-action-button-group'}/>
                         </div>
                     </div>

@@ -1,20 +1,21 @@
-import PageTitle from "../Header/PageTitle"
-import ProfilNavigation from "./ProfilNavigation"
-import { useContext } from "react"
-import { UserContext } from "../../UserContext"
-import { Link } from "react-router-dom"
-import BackButton from "../backButton"
-import { TweetContext } from "../../TweetContext"
-import IconComent from "../TweetActionButton/comentIcon/IconComent"
-import IconLike from "../TweetActionButton/like/IconLike"
-import IconRetweet from "../TweetActionButton/retweetIcon/IconRetweet"
-import IconUpload from "../TweetActionButton/uploadIcon/IconUpload"
+import PageTitle from "../Header/PageTitle";
+import ProfilNavigation from "./ProfilNavigation";
+import { useContext } from "react";
+import { UserContext } from "../../UserContext";
+import { Link } from "react-router-dom";
+import BackButton from "../backButton";
+import { TweetContext } from "../../TweetContext";
+import IconComent from "../TweetActionButton/comentIcon/IconComent";
+import IconLike from "../TweetActionButton/like/IconLike";
+import IconRetweet from "../TweetActionButton/retweetIcon/IconRetweet";
+import IconUpload from "../TweetActionButton/uploadIcon/IconUpload";
+import moment from 'moment/moment';
 
 function Info() {
 
-  const  tweetData  = useContext(TweetContext)
-  const user = useContext(UserContext)
-  const filtrer = tweetData.filter(filtre => filtre.auteur == user.name)
+  const  tweetData  = useContext(TweetContext);
+  const user = useContext(UserContext);
+  const filtrer = tweetData.filter(filtre => filtre.name === user.name)
   
   return (
     <div className="timeline">
@@ -28,16 +29,16 @@ function Info() {
               </h1>
           </span>
         </div>
-        <div className="image-background-profil">
-          <img src={user.profil} alt="" />
-        </div>
+        <div className="image-background-profil image-background-profil-user" style={{backgroundImage: `url(${user.profileBackground})`}}>
+                <img src={user.profilePicture} alt="avatar" />
+            </div>
         <div className="profil-news">
           <button className="profil-button">Edit profile</button>
           <div className="profil-hedear-title">
             <h3>{user.name}</h3>
             <span className="tweet-title-details">{user.subname}</span>
           </div>
-          <p>{user.domain}</p>
+          <p>{user.bio}</p>
           <div className="profil-follow">
             <span><span className="tweet-title-details">13 </span><span>Following</span></span>
             <span><span className="tweet-title-details">130 </span><span>Follower</span></span>
@@ -50,26 +51,28 @@ function Info() {
           filtrer.map(posts => (
             <div className="tweet">
               <div className="tweet-avatar">
-                <img src={posts.avatarTweet} alt="" />
+                <img src={posts.profilePicture} alt="" />
               </div>
               <div className="profil-hedear-title">
                 <div className="tweet-content">
                   <div className="tweet-body">
                     <div className="tweet-title">
-                      <span className='tweet-title-author'>{posts.auteur}</span>
-                        {posts.certificat ? (<span><img src="/images/Vector.svg" alt="certificated" /></span>):(<span>-</span>)}
-                        <span className='tweet-title-details'>{posts.detailsTitleTweet}</span>
-                        <span className='tweet-title-details'>{posts.time}</span>
+                      <span className='tweet-title-author'>{posts.name}</span>
+                        {posts.handle ? (<span><img src="/images/Vector.svg" alt="certificated" /></span>):(<span>-</span>)}
+                        <span className='tweet-title-details'>{posts.handle}</span>
+                        <span className='tweet-title-details'>{moment(posts.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</span>
                     </div>
                     <div className="tweet-text">
-                      {posts.textTweet}
+                      {posts.text}
                     </div>
-                    {posts.imageTweet && <span className='tweet-image'><img src={posts.imageTweet} alt=""/></span>}
+                    {
+                      posts.media.length > 0 ? <img key={posts.id} src={posts.media[0]} alt={`Image ${posts.id}`} className='max-w-full h-60 object-cover rounded-3xl border-2 border-gray-700'/> : posts.media
+                    }
                   </div>
                   <div className="tweet-actions">
-                    <IconComent counts={posts.message} className={'tweet-action-button-reply'}/>
-                    <IconRetweet counts={posts.share} className={'tweet-action-button-retweet'}/>
-                    <IconLike tweetId={posts.id} initialCount ={posts.like} className={'tweet-action-button-react'} />
+                    <IconComent counts={posts.favoriteCount} className={'tweet-action-button-reply'}/>
+                    <IconRetweet counts={posts.retweetCount} className={'tweet-action-button-retweet'}/>
+                    <IconLike tweetId={posts.id} initialCount ={posts.repliesCount} className={'tweet-action-button-react'} />
                     <IconUpload counts={posts.upload} className={'tweet-action-button-group'}/>
                   </div>
                 </div>
